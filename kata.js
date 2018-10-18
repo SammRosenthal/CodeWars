@@ -41,3 +41,62 @@ function oddOrEven(array) {
 function century(year) {
     return Math.ceil(year/100);
 };
+
+
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+
+function solution(number){
+    let arr = [];
+    for (let i = 0; i < number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        arr.push(i);
+      }
+    }
+    let sum = arr.reduce((a,b) => a+b, 0);
+    return sum;
+  }
+
+  // Easier solution found after the fact...
+
+  function solution(number){
+    var sum = 0;
+    
+    for(var i = 1;i< number; i++){
+      if(i % 3 == 0 || i % 5 == 0){
+        sum += i
+      }
+    }
+    return sum;
+  }
+
+
+//   Given an array of integers.
+
+//   Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+  
+//   If the input array is empty or null, return an empty array.
+  
+//   Example
+//   For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+function countPositivesSumNegatives(input) {  
+let positiveSum = 0;
+let negativeSum = 0;
+if (input != null && input != undefined && input.length > 0){
+  for (let i = 0; i < input.length; i++){
+    if(input[i] > 0) {
+      positiveSum += 1;
+    } else if (input[i] < 0) {
+      negativeSum += input[i];
+    }   
+  }
+} else {    
+  return [];  
+} 
+return [positiveSum, negativeSum];  
+}
+
