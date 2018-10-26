@@ -100,3 +100,72 @@ if (input != null && input != undefined && input.length > 0){
 return [positiveSum, negativeSum];  
 }
 
+
+// Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+
+// Your mission: 
+// Write a function called checkCoupon to verify that a coupon is valid and not expired. If the coupon is good, return true. Otherwise, return false.
+
+// A coupon expires at the END of the expiration date. All dates will be passed in as strings in this format: "June 15, 2014"
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  var cr = currentDate.split(',').join('')
+  var er = expirationDate.split(',').join('')
+  var currentDateDate = new Date(cr);
+  var expirationDateDate = new Date(er);
+  if(enteredCode !== correctCode)  {
+    return false;
+  }if(currentDateDate > expirationDateDate){
+    return false;
+  }
+  return true
+}
+
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, and u as vowels for this Kata.
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  var vowelsCount = 0;
+     for (var i = 0; i < str.length; i++) {
+       if ( str.charAt(i) == 'a') {
+         vowelsCount++;
+       } else if ( str.charAt(i) == 'e' ) {
+         vowelsCount++;
+       } else if ( str.charAt(i) == 'i' ) {
+         vowelsCount++;
+       } else if ( str.charAt(i) == 'o' ) {
+        vowelsCount++;
+       } else if ( str.charAt(i) == 'u' ) {
+         vowelsCount++;
+       }
+     }
+  return vowelsCount;
+ }
+
+
+//  Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+//  Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+ 
+//  Examples:
+ 
+//  hello "john"   => "Hello, John!"
+//  hello "aliCE"  => "Hello, Alice!"
+//  hello          => "Hello, World!" # name not given
+//  hello ''       => "Hello, World!" # name is an empty String
+
+ function hello(name) {
+  if (name == ''){
+    return "Hello, World!";
+  }
+
+  if(name != null || name != undefined){
+    return "Hello, " + name.charAt(0).toUpperCase() + name.slice(1).toLowerCase() + "!";
+    } else {
+    return "Hello, World!";
+    }
+}
