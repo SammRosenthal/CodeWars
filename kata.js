@@ -169,3 +169,55 @@ function getCount(str) {
     return "Hello, World!";
     }
 }
+
+
+// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+// So given a string "super", we should return a list of [2, 4].
+
+// Some examples:
+// Mmmm  => []
+// Super => [2,4]
+// Apple => [1,5]
+// YoMama -> [1,2,4,6]
+// NOTE: Vowels in this context refers to English Language Vowels - a e i o u y
+
+// NOTE: this is indexed from [1..n] (not zero indexed!)
+
+function vowelIndices(word){
+  let vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"]
+  let answer = [];
+  for ( let i = 0; i < word.length; i++ ) {
+    for ( let v = 0; v < vowels.length; v++ ) {
+      if ( word[i] == vowels[v] ) {
+        answer.push(i+1);
+      }
+    }
+  }
+  return answer;
+}
+
+
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+// You can assume all values in the array are numbers.
+
+function smallEnough(a, limit){
+  for ( let i = 0; i < a.length; i++ ) {
+    if (a[i] > limit) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+function repeatStr (n, s) {
+  let repeatedStr = '';
+  for(let i = 0; i < n; i++) {
+    repeatedStr = repeatedStr.concat(s);
+    }
+  return repeatedStr;
+}
