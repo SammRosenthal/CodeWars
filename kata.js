@@ -221,3 +221,122 @@ function repeatStr (n, s) {
     }
   return repeatedStr;
 }
+
+
+// You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block in a direction and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+// Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+
+function isValidWalk(walk) {
+  
+  let countN = 0;
+  let countS = 0;
+  let countE = 0;
+  let countW = 0;
+  
+  for ( let i = 0; i < walk.length; i++ ) {
+    if ( walk[i] == 'n' || walk[i] == 'N' ) {
+      countN++;
+    } else if ( walk[i] == 's' || walk[i] == 'S' ) {
+      countS--;
+    } else if ( walk[i] == 'e' || walk[i] == 'E' ) {
+      countE++;
+    } else if ( walk[i] == 'w' || walk[i] == 'W' ) {
+      countW--;
+    }
+  }
+  
+  if ( countN + countS + countE + countW == 0 && walk.length == 10 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// Note: keep the original order of the names in the output.
+
+function friend(friends){
+  let answer = [];
+  for ( let i = 0; i < friends.length; i++ ) {
+    if ( friends[i].length == 4 ) {
+      answer.push(friends[i]);
+    }
+  }
+  return answer;
+}
+
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+function spinWords(string){
+  let wordArr = string.split(' ')
+  for ( let i = 0; i < wordArr.length; i++) {
+      if ( wordArr[i].length > 4 ) {
+         let reverseStr = wordArr[i];
+         wordArr[i] = reverseStr.split('').reverse().join('')
+          
+      }
+  }
+  return wordArr.join(" ");
+}
+
+
+// Given an array, find the int that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+function findOdd(A) { 
+  var count = 0;
+  for(var i = 0; i < A.length; i++) {
+    for(var j = 0; j < A.length; j++) {
+          if(A[i] == A[j]) {
+            count++;
+          }
+        }
+    if (count % 2 !== 0) {
+        return A[i];
+    }
+  }
+  count = 0;
+}
+
+
+// Task
+//  	In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+// Rules
+//  	1.  The input string will always be lower case but maybe empty.
+
+// 2.  If the character in the string is whitespace then pass over it as if it was an empty seat.
+// Example
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+// Good luck and enjoy!
+
+function wave(word){
+  let arr = [];
+  if ( word != null || word != undefined ) {
+      for ( let i = 0; i < word.length; i++ ) {
+          if (word.charAt(i) != ' ') {
+              let wordArr = word.split('');
+              wordArr[i] = word.charAt(i).toUpperCase();
+              arr.push(wordArr.join(''));
+          }    
+      }
+  }
+  return arr;
+}
+
+
+
+
