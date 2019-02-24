@@ -338,5 +338,36 @@ function wave(word){
 }
 
 
+// Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
 
+// Examples
+// "()"              =>  true
+// ")(()))"          =>  false
+// "("               =>  false
+// "(())((()())())"  =>  true
+// Constraints
+// 0 <= input.length <= 100
 
+function validParentheses(parens){
+  let arr = parens.split("");
+  let left = 0;
+  let right = 0;
+  
+  if (arr[0] === ")") return false;
+  if (arr[arr.length - 1] === "(") return false;
+  
+  console.log(parens)
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === "(") {
+      left++
+    } else {
+      right++
+    }
+  }
+  
+  if (left === right) {
+    return true
+  } else {
+    return false
+  }
+}
