@@ -371,3 +371,159 @@ function validParentheses(parens){
     return false
   }
 }
+
+
+// Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
+
+// Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
+
+// Examples:
+
+// // must return 2
+// cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}); 
+// // must return 0
+// cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
+
+function cakes(recipe, available) {
+  let recipeKeys = Object.keys(recipe);
+  let answer = 0;
+  
+  
+  function removeIngredients(recipe, available){
+  console.log('remove is running', answer)
+    for(let i = 0; i < recipeKeys.length; i++) {
+      if( available[recipeKeys[i]] - recipe[recipeKeys[i]] >= 0){
+        available[recipeKeys[i]] = available[recipeKeys[i]] - recipe[recipeKeys[i]]
+      } else {
+        return null
+      }
+    }
+      answer++
+      return removeIngredients(recipe, available);
+  }
+  
+  removeIngredients(recipe, available)
+
+  return answer
+}
+
+
+// Once upon a time, on a way through the old wild west,…
+// … a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
+
+// How I crossed the desert the smart way.
+// The directions given to the man are, for example, the following:
+
+// ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"].
+// or
+
+// { "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" };
+// or (haskell)
+
+// [North, South, South, East, West, North, West]
+// You can immediatly see that going "NORTH" and then "SOUTH" is not reasonable, better stay to the same place! So the task is to give to the man a simplified version of the plan. A better plan in this case is simply:
+
+// ["WEST"]
+// or
+
+// { "WEST" }
+// or (haskell)
+
+// [West]
+// or (rust)
+
+// [WEST];
+// Other examples:
+// In ["NORTH", "SOUTH", "EAST", "WEST"], the direction "NORTH" + "SOUTH" is going north and coming back right away. What a waste of time! Better to do nothing.
+
+// The path becomes ["EAST", "WEST"], now "EAST" and "WEST" annihilate each other, therefore, the final result is [] (nil in Clojure).
+
+// In ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"], "NORTH" and "SOUTH" are not directly opposite but they become directly opposite after the reduction of "EAST" and "WEST" so the whole path is reducible to ["WEST", "WEST"].
+
+// Task
+// Write a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).
+
+// The Haskell version takes a list of directions with data Direction = North | East | West | South. The Clojure version returns nil when the path is reduced to nothing. The Rust version takes a slice of enum Direction {NORTH, SOUTH, EAST, WEST}.
+
+// Examples
+// dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]) => ["WEST"]
+// dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]) => []
+// See more examples in "Example Tests"
+// Note
+// Not all paths can be made simpler. The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
+
+function dirReduc(arr){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === "NORTH" && arr[i+1] === "SOUTH"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "SOUTH" && arr[i+1] === "NORTH"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "EAST" && arr[i+1] === "WEST"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "WEST" && arr[i+1] === "EAST"){
+      arr.splice(i, 2)
+      i--
+    }
+  }
+  
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === "NORTH" && arr[i+1] === "SOUTH"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "SOUTH" && arr[i+1] === "NORTH"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "EAST" && arr[i+1] === "WEST"){
+      arr.splice(i, 2)
+      i--
+    }
+    
+    if(arr[i] === "WEST" && arr[i+1] === "EAST"){
+      arr.splice(i, 2)
+      i--
+    }
+  }
+  return arr
+}
+
+
+// You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
+
+// Examples
+// [2, 4, 0, 100, 4, 11, 2602, 36]
+// Should return: 11 (the only odd number)
+
+// [160, 3, 1719, 19, 11, 13, -21]
+// Should return: 160 (the only even number)
+
+function findOutlier(integers){
+  let even = []
+  let odd = []
+  
+  for (let i = 0; i <= integers.length - 1; i++){
+    if (integers[i] % 2 === 0){
+      even.push(integers[i])
+    } else {
+      odd.push(integers[i])
+    }
+  }
+  
+  if (even.length === 1){
+    return even[0]
+  } else {
+    return odd[0]
+  }
+}
