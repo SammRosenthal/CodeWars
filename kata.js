@@ -1,3 +1,20 @@
+
+
+function pigIt(str){
+   let array = str.split(" ")
+   let first = ""
+   let ignore = ["!", "?"]
+ 
+   for (let i = 0; i < array.length; i++){
+     if (!array[i].includes("!") && !array[i].includes("?")) {
+       array[i] = array[i].substring(1) + array[i].charAt(0) + "ay"
+     }
+   }
+   
+   return array.join(" ")
+ }
+
+
 // Complete the function scramble(str1, str2) that returns true if a portion of str1 characters can be rearranged to match str2, otherwise returns false.
 
 // Notes:
