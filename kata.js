@@ -1,23 +1,82 @@
+// COUNT THE SMILEYS JAVA
+// Description:
+// Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+// Rules for a smiling face:
+// -Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// -A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// -Every smiling face must have a smiling mouth that should be marked with either ) or D.
+// No additional characters are allowed except for those mentioned.
+// Valid smiley face examples:
+// :) :D ;-D :~)
+// Invalid smiley faces:
+// ;( :> :} :] 
+
+// Example cases:
+
+// countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+// countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+// countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+
+// Note: In case of an empty array return 0. You will not be tested with invalid input (input will always be an array). Order of the face (eyes, nose, mouth) elements will always be the same
+// Happy coding!
+
+import java.util.*;
+
+public class SmileFaces {
+  
+  public static int countSmileys(List<String> arr) {
+    int smileyCount = 0;
+      for (String smiley : arr) {
+    System.out.println(smiley);
+        if (smiley.length() < 3 ) {
+       
+          if( (Character.toString(smiley.charAt(0)).compareTo(":") == 0) || (Character.toString(smiley.charAt(0)).compareTo(";") == 0) ) {
+        
+            if ( (smiley.length() == 2) && (Character.toString(smiley.charAt(1)).compareTo(")") == 0) || (Character.toString(smiley.charAt(1)).compareTo("D") == 0) ) {
+          
+              System.out.println("passed");
+              smileyCount++;
+            }
+          }
+        } else {
+          if (smiley.length() < 4) {
+            if( (Character.toString(smiley.charAt(0)).compareTo(":") == 0) || (Character.toString(smiley.charAt(0)).compareTo(";") == 0) ) {
+              if ( (Character.toString(smiley.charAt(1)).compareTo("-") == 0) || (Character.toString(smiley.charAt(1)).compareTo("~") == 0) ) {
+                if ( (Character.toString(smiley.charAt(2)).compareTo(")") == 0) || (Character.toString(smiley.charAt(2)).compareTo("D") == 0)) {
+                  System.out.println("passed");
+                  smileyCount++;
+                }
+              }
+            }
+          }   
+         }
+      }
+      
+      
+      return smileyCount;
+  }
+}
+
+
 // Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
 // Examples
 // pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
 // pigIt('Hello world !');     // elloHay orldway !
 
-function pigIt(str){
-   let array = str.split(" ")
-   let first = ""
-   let ignore = ["!", "?"]
- 
-   for (let i = 0; i < array.length; i++){
-     if (!array[i].includes("!") && !array[i].includes("?")) {
-       array[i] = array[i].substring(1) + array[i].charAt(0) + "ay"
-     }
-   }
-   
-   return array.join(" ")
- }
+function pigIt(str) {
+   let array = str.split(" ");
+   let first = "";
+   let ignore = ["!", "?"];
 
+   for (let i = 0; i < array.length; i++) {
+      if (!array[i].includes("!") && !array[i].includes("?")) {
+         array[i] = array[i].substring(1) + array[i].charAt(0) + "ay";
+      }
+   }
+
+   return array.join(" ");
+}
 
 // Complete the function scramble(str1, str2) that returns true if a portion of str1 characters can be rearranged to match str2, otherwise returns false.
 
@@ -35,18 +94,16 @@ function scramble(str1, str2) {
    let word = str2.split("");
    let scramble = str1.split("");
    let hashTable = {};
-   
-   for (let i = 0; i < word.length; i++){
-     if (!scramble.includes(word[i])){
-       return false;
-     } else {
-       scramble.splice(scramble.indexOf(word[i]), 1);
-     }
+
+   for (let i = 0; i < word.length; i++) {
+      if (!scramble.includes(word[i])) {
+         return false;
+      } else {
+         scramble.splice(scramble.indexOf(word[i]), 1);
+      }
    }
    return true;
- }
- 
-
+}
 
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
@@ -73,7 +130,6 @@ function likes(names) {
          2} others like this`;
    }
 }
-
 
 // In this kata you have to write a simple Morse code decoder. While the Morse code is now mostly superceded by voice and digital data communication channels, it still has its use in some applications around the world.
 // The Morse code encodes every character as a sequence of "dots" and "dashes". For example, the letter A is coded as ·−, letter Q is coded as −−·−, and digit 1 is coded as ·−−−−. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is ···· · −·−−   ·−−− ··− −·· ·.
@@ -122,7 +178,6 @@ decodeMorse = function(morseCode) {
       .trim();
 };
 
-
 // Count the number of Duplicates
 // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 
@@ -135,21 +190,20 @@ decodeMorse = function(morseCode) {
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-function duplicateCount(text){
+function duplicateCount(text) {
    let arr = text.toLowerCase().split("");
    let answer = [];
-   
-   for (let i = 0; i < arr.length; i++) {
-     for (let j = 0; j < arr.length; j++) {
-       if(arr[i] == arr[j] && i != j && !answer.includes(arr[i])) {
-         answer.push(arr[i]);
-       }
-     }
-   }
-   
-   return answer.length;
-};
 
+   for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr.length; j++) {
+         if (arr[i] == arr[j] && i != j && !answer.includes(arr[i])) {
+            answer.push(arr[i]);
+         }
+      }
+   }
+
+   return answer.length;
+}
 
 // Task:
 // Given an array of numbers (a list in groovy), determine whether the sum of all of the numbers is odd or even.
@@ -175,7 +229,6 @@ function oddOrEven(array) {
    }
 }
 
-
 //  Introduction
 //  The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
 
@@ -195,7 +248,6 @@ function century(year) {
    return Math.ceil(year / 100);
 }
 
-
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
@@ -213,7 +265,6 @@ function solution(number) {
    return sum;
 }
 
-
 // Easier solution found after the fact...
 
 function solution(number) {
@@ -226,7 +277,6 @@ function solution(number) {
    }
    return sum;
 }
-
 
 //   Given an array of integers.
 
@@ -254,7 +304,6 @@ function countPositivesSumNegatives(input) {
    return [positiveSum, negativeSum];
 }
 
-
 // Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
 
 // Your mission:
@@ -275,7 +324,6 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
    }
    return true;
 }
-
 
 // Return the number (count) of vowels in the given string.
 
@@ -300,7 +348,6 @@ function getCount(str) {
    }
    return vowelsCount;
 }
-
 
 //  Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 
@@ -330,7 +377,6 @@ function hello(name) {
    }
 }
 
-
 // We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
 
 // So given a string "super", we should return a list of [2, 4].
@@ -357,7 +403,6 @@ function vowelIndices(word) {
    return answer;
 }
 
-
 // You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
 
 // You can assume all values in the array are numbers.
@@ -371,7 +416,6 @@ function smallEnough(a, limit) {
    return true;
 }
 
-
 // Write a function called repeatStr which repeats the given string string exactly n times.
 
 function repeatStr(n, s) {
@@ -381,7 +425,6 @@ function repeatStr(n, s) {
    }
    return repeatedStr;
 }
-
 
 // You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block in a direction and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
 // Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
@@ -411,7 +454,6 @@ function isValidWalk(walk) {
    }
 }
 
-
 // Make a program that filters a list of strings and returns a list with only your friends name in it.
 
 // If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
@@ -429,7 +471,6 @@ function friend(friends) {
    }
    return answer;
 }
-
 
 // Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 
@@ -453,7 +494,6 @@ function spinWords(string) {
    return wordArr.join(" ");
 }
 
-
 // Given an array, find the int that appears an odd number of times.
 
 // There will always be only one integer that appears an odd number of times.
@@ -472,7 +512,6 @@ function findOdd(A) {
    }
    count = 0;
 }
-
 
 // Task
 //  	In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
@@ -497,7 +536,6 @@ function wave(word) {
    }
    return arr;
 }
-
 
 // Write a function called that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.
 
@@ -533,7 +571,6 @@ function validParentheses(parens) {
    }
 }
 
-
 // Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
 
 // Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
@@ -567,7 +604,6 @@ function cakes(recipe, available) {
 
    return answer;
 }
-
 
 // Once upon a time, on a way through the old wild west,…
 // … a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
@@ -612,7 +648,6 @@ function cakes(recipe, available) {
 // See more examples in "Example Tests"
 // Note
 // Not all paths can be made simpler. The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
-
 
 function dirReduc(arr) {
    for (let i = 0; i < arr.length; i++) {
@@ -661,7 +696,6 @@ function dirReduc(arr) {
    return arr;
 }
 
-
 // You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
 
 // Examples
@@ -690,7 +724,6 @@ function findOutlier(integers) {
    }
 }
 
-
 // Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them.
 
 // Let's assume that a song consists of some number of words (that don't contain WUB). To make the dubstep remix of this song, Polycarpus inserts a certain number of words "WUB" before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighbouring words), and then the boy glues together all the words, including "WUB", in one string and plays the song at the club.
@@ -713,5 +746,3 @@ function songDecoder(song) {
    let noWub = song.replace(/WUB/gi, " ");
    return noWub.replace(/[ ]{2,}/gi, " ").trim();
 }
-
-
