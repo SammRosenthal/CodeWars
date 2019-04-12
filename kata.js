@@ -1,3 +1,18 @@
+
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+// repeatStr(6, "I") // "IIIIII"
+// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+function repeatStr (n, s) {
+   let repeatedStr = '';
+   for(let i = 0; i < n; i++) {
+     repeatedStr = repeatedStr.concat(s);
+     }
+   return repeatedStr;
+ }
+
+
 // Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
 
 // HH = hours, padded to 2 digits, range: 00 - 99
