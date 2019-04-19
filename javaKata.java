@@ -1,3 +1,32 @@
+
+
+public class NumberPalindrome {
+    public static boolean isPalindrome (int number) {
+        if (number < 0) {
+            number = number * -1;
+        }
+        
+        int original = number;
+        int reverse = 0;
+        
+        while (number > 0) {
+            int lastDigit = number % 10;
+            number = number / 10;
+            reverse = reverse * 10;
+            reverse += lastDigit;
+        }
+        
+        
+        if (reverse == original) {
+            return true;
+        } else {
+            return false;
+        }
+       
+    }
+   }
+
+
 // Write a method named area with one double parameter named radius.
 // The method needs to return a double value that represents the area of a circle.
 // If the parameter radius is negative then return -1.0 to represent an invalid value.
