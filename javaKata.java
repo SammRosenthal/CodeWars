@@ -1,3 +1,32 @@
+
+
+public class SharedDigit {
+    public static boolean hasSharedDigit (int a, int b) {
+        if (a < 10 || b < 10 || a > 99 || b > 99) {
+            return false;
+        }
+        
+        int aOne = a % 10;
+        System.out.println("aOne" + aOne);
+        a = a / 10;
+        int aTwo = a;
+        System.out.println("aTwo" + aTwo);
+        
+        int bOne = b % 10;
+        System.out.println("bOne" + bOne);
+        b = b / 10;
+        int bTwo = b;
+        System.out.println("bTwo" + bTwo);
+        
+        if (aOne == bOne || aOne == bTwo || aTwo == bOne || aTwo == bTwo) {
+            return true;
+        }
+        
+        return false;
+    }
+}
+
+
 // Write a method named getEvenDigitSum with one parameter of type int called number.
 // The method should return the sum of the even digits within the number.
 // If the number is negative, the method should return -1 to indicate an invalid value.
