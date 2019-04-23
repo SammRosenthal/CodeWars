@@ -1,4 +1,47 @@
-<<<<<<< HEAD
+// What is the perfect number?
+// A perfect number is a positive integer which is equal to the sum of its proper positive divisors.
+// Proper positive divisors are positive integers that fully divide the perfect number without leaving a remainder and exclude the perfect number itself.
+// For example, take the number 6:
+// Its proper divisors are 1, 2, and 3 (since 6 is the value of the perfect number, it is excluded), and the sum of its proper divisors is 1 + 2 + 3 = 6. 
+
+// Therefore, 6 is a perfect number (as well as the first perfect number).
+
+// Write a method named isPerfectNumber with one parameter of type int named number. 
+// If number is < 1, the method should return false.
+// The method must calculate if the number is perfect. If the number is perfect, the method should return true; otherwise, it should return false.
+
+// EXAMPLE INPUT/OUTPUT:
+// * isPerfectNumber(6); should return true since its proper divisors are 1, 2, 3 and the sum is 1 + 2 + 3 = 6
+// * isPerfectNumber(28); should return true since its proper divisors are 1, 2, 4, 7, 14 and the sum is 1 + 2 + 4 + 7 + 14 = 28
+// * isPerfectNumber(5); should return false since its only proper divisor is 1 and the sum is 1 not 5
+// * isPerfectNumber(-1); should return false since the number is < 1
+
+// HINT: Use a while or for loop.
+// HINT: Use the remainder operator.
+// NOTE: The method isPerfectNumber should be defined as public static like we have been doing so far in the course.
+// NOTE: Do not add a main method to the solution code.
+
+public class PerfectNumber {
+    public static boolean isPerfectNumber(int number) {
+      
+         if (number < 1) {
+             return false;
+         }
+      
+         int sum = 0;
+      
+         for (int divisor = 1; divisor < number; divisor++) {
+      
+             if (number % divisor == 0) {
+                 sum = sum + divisor;
+             }
+         }
+      
+         return (sum == number);
+     }
+ }
+
+
 // Write a method named printFactors with one parameter of type int named number. 
 // If number is < 1, the method should print "Invalid Value".
 // The method should print all factors of the number. A factor of a number is an integer which divides that number wholly (i.e. without leaving a remainder).
@@ -47,7 +90,6 @@ public class FactorPrinter {
 // * hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
 
 // NOTE: The method hasSharedDigit should be defined as public static like we have been doing so far in the course.
-=======
 // Write a method named getGreatestCommonDivisor with two parameters of type int named first and second. 
 // If one of the parameters is < 10, the method should return -1 to indicate an invalid value.
 // The method should return the greatest common divisor of the two numbers (int).
@@ -165,7 +207,6 @@ public class LastDigitChecker {
 
 // NOTE: The method hasSharedDigit should be defined as public static like we
 // have been doing so far in the course.
->>>>>>> d4b2fdac1e3fa7de136c8c9999f1f58cb0220ea0
 // NOTE: Do not add a main method to the solution code.
 
 public class SharedDigit {
