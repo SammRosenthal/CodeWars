@@ -1,51 +1,201 @@
+// Write a method called numberToWords with one int parameter named number.
+
+// The method should print out the passed number using words for the digits.
+
+// If the number is negative, print "Invalid Value".
+
+// To print the number as words, follow these steps:
+
+// 1. Extract the last digit of the given number using the remainder operator. 
+// 2. Convert the value of the digit found in Step 1 into a word. There are 10 possible values for that digit, those being 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Print the corresponding word for each digit, e.g. print "Zero" if the digit is 0, "One" if the digit is 1, and so on.
+// 3. Remove the last digit from the number.
+// 4. Repeat Steps 2 through 4 until the number is 0.
+
+// The logic above is correct, but in its current state, the words will be printed in reverse order. For example, if the number is 234, the logic above will produce the output "Four Three Two" instead of "Two Three Four". To overcome this problem, write a second method called reverse.
+
+// The method reverse should have one int parameter and return the reversed number (int). For example, if the number passed is 234, then the reversed number would be 432. The method  reverse should also reverse negative numbers.
+
+// Use the method reverse within the method numberToWords in order to print the words in the correct order.
+
+// Another thing to keep in mind is any reversed number with leading zeroes (e.g. the reversed number for 100 is 001). The logic above for the method numberToWords will print "One", but that is incorrect. It should print "One Zero Zero". To solve this problem, write a third method called getDigitCount.
+
+// The method getDigitCount should have one int parameter called number and return the count of the digits in that number. If the number is negative, return -1 to indicate an invalid value.
+// For example, if the number has a value of 100, the method getDigitCount should return 3 since the number 100 has 3 digits (1, 0, 0).
+
+// Example Input/Output - getDigitCount method
+
+// * getDigitCount(0); should return 1 since there is only 1 digit
+
+// * getDigitCount(123); should return 3
+
+// * getDigitCount(-12); should return -1 since the parameter is negative
+
+// * getDigitCount(5200); should return 4 since there are 4 digits in the number
+
+// Example Input/Output - reverse method
+
+// * reverse(-121); should  return -121
+
+// * reverse(1212); should return  2121
+
+// * reverse(1234); should return 4321
+
+// * reverse(100); should return 1
+
+// Example Input/Output - numberToWords method
+
+// * numberToWords(123); should print "One Two Three".
+
+// * numberToWords(1010); should print "One Zero One Zero".
+
+// * numberToWords(1000); should print "One Zero Zero Zero".
+
+// * numberToWords(-12); should print "Invalid Value" since the parameter is negative.
+
+// HINT: Use a for loop to print zeroes after reversing the number. As seen in a previous example, 100 reversed becomes 1, but the method numberToWords should print "One Zero Zero". To get the number of zeroes, check the difference between the digit count from the original number and the reversed number. 
+
+// NOTE: When printing words, each word can be in its own line. For example, numberToWords(123); can be:
+
+// One
+// Two
+// Three
+
+// They don't have to be separated by a space.
+
+// NOTE: The methods numberToWords, getDigitCount, reverse should be defined as public static like we have been doing so far in the course.
+// NOTE: In total, you have to write 3 methods.
+
+// NOTE: Do not add a main method to the solution code.
+
+public class NumberToWords {
+    public static int getDigitCount(int number) {
+        int i = 0;
+        if (number < 0) {
+            return -1;
+        }
+
+        do {
+            i++;
+            number = number / 10;
+        } while (number != 0);
+        return i;
+    }
+
+    public static int reverse(int number) {
+        int digitReverse = 0;
+        while (number != 0) {
+            // Extract last digit
+            int lastDigit = number % 10;
+            // Increase the place by value one
+            digitReverse = digitReverse * 10;
+            // Add last digit to the number
+            digitReverse += lastDigit;
+            // remove last digit of number
+            number /= 10;
+        }
+        return digitReverse;
+    }
+
+    public static void numberToWords(int number) {
+        int rev = reverse(number);
+        if (rev < 0) {
+            System.out.println("Invalid Value");
+        } else {
+            int count = getDigitCount(number);
+            String digitWord = "";
+            String finalResult = "";
+            for (int i = 0; i != count; i++) {
+                int firstDigit = rev % 10;
+                rev /= 10;
+
+                if (firstDigit == 0) {
+                    digitWord = "Zero ";
+                } else if (firstDigit == 1) {
+                    digitWord = "One ";
+                } else if (firstDigit == 2) {
+                    digitWord = "Two ";
+                } else if (firstDigit == 3) {
+                    digitWord = "Three ";
+                } else if (firstDigit == 4) {
+                    digitWord = "Four ";
+                } else if (firstDigit == 5) {
+                    digitWord = "Five ";
+                } else if (firstDigit == 6) {
+                    digitWord = "Six ";
+                } else if (firstDigit == 7) {
+                    digitWord = "Seven ";
+                } else if (firstDigit == 8) {
+                    digitWord = "Eight ";
+                } else if (firstDigit == 9) {
+                    digitWord = "Nine ";
+                }
+                finalResult += digitWord;
+            }
+            System.out.println(finalResult);
+        }
+
+    }
+}
+
 // What is the perfect number?
-// A perfect number is a positive integer which is equal to the sum of its proper positive divisors.
-// Proper positive divisors are positive integers that fully divide the perfect number without leaving a remainder and exclude the perfect number itself.
+// A perfect number is a positive integer which is equal to the sum of its
+// proper positive divisors.
+// Proper positive divisors are positive integers that fully divide the perfect
+// number without leaving a remainder and exclude the perfect number itself.
 // For example, take the number 6:
-// Its proper divisors are 1, 2, and 3 (since 6 is the value of the perfect number, it is excluded), and the sum of its proper divisors is 1 + 2 + 3 = 6. 
+// Its proper divisors are 1, 2, and 3 (since 6 is the value of the perfect
+// number, it is excluded), and the sum of its proper divisors is 1 + 2 + 3 = 6.
 
 // Therefore, 6 is a perfect number (as well as the first perfect number).
 
-// Write a method named isPerfectNumber with one parameter of type int named number. 
+// Write a method named isPerfectNumber with one parameter of type int named
+// number.
 // If number is < 1, the method should return false.
-// The method must calculate if the number is perfect. If the number is perfect, the method should return true; otherwise, it should return false.
+// The method must calculate if the number is perfect. If the number is perfect,
+// the method should return true; otherwise, it should return false.
 
 // EXAMPLE INPUT/OUTPUT:
-// * isPerfectNumber(6); should return true since its proper divisors are 1, 2, 3 and the sum is 1 + 2 + 3 = 6
-// * isPerfectNumber(28); should return true since its proper divisors are 1, 2, 4, 7, 14 and the sum is 1 + 2 + 4 + 7 + 14 = 28
-// * isPerfectNumber(5); should return false since its only proper divisor is 1 and the sum is 1 not 5
+// * isPerfectNumber(6); should return true since its proper divisors are 1, 2,
+// 3 and the sum is 1 + 2 + 3 = 6
+// * isPerfectNumber(28); should return true since its proper divisors are 1, 2,
+// 4, 7, 14 and the sum is 1 + 2 + 4 + 7 + 14 = 28
+// * isPerfectNumber(5); should return false since its only proper divisor is 1
+// and the sum is 1 not 5
 // * isPerfectNumber(-1); should return false since the number is < 1
 
 // HINT: Use a while or for loop.
 // HINT: Use the remainder operator.
-// NOTE: The method isPerfectNumber should be defined as public static like we have been doing so far in the course.
+// NOTE: The method isPerfectNumber should be defined as public static like we
+// have been doing so far in the course.
 // NOTE: Do not add a main method to the solution code.
 
 public class PerfectNumber {
     public static boolean isPerfectNumber(int number) {
-      
-         if (number < 1) {
-             return false;
-         }
-      
-         int sum = 0;
-      
-         for (int divisor = 1; divisor < number; divisor++) {
-      
-             if (number % divisor == 0) {
-                 sum = sum + divisor;
-             }
-         }
-      
-         return (sum == number);
-     }
- }
 
+        if (number < 1) {
+            return false;
+        }
 
-// Write a method named printFactors with one parameter of type int named number. 
+        int sum = 0;
+
+        for (int divisor = 1; divisor < number; divisor++) {
+
+            if (number % divisor == 0) {
+                sum = sum + divisor;
+            }
+        }
+
+        return (sum == number);
+    }
+}
+
+// Write a method named printFactors with one parameter of type int named
+// number.
 // If number is < 1, the method should print "Invalid Value".
-// The method should print all factors of the number. A factor of a number is an integer which divides that number wholly (i.e. without leaving a remainder).
-// For example, 3 is a factor of 6 because 3 fully divides 6 without leaving a remainder. In other words 6 / 3 = 2.
+// The method should print all factors of the number. A factor of a number is an
+// integer which divides that number wholly (i.e. without leaving a remainder).
+// For example, 3 is a factor of 6 because 3 fully divides 6 without leaving a
+// remainder. In other words 6 / 3 = 2.
 
 // EXAMPLE INPUT/OUTPUT:
 // * printFactors(6); → should print 1 2 3 6
@@ -54,7 +204,8 @@ public class PerfectNumber {
 // * printFactors(-1); → should print "Invalid Value" since number is < 1
 
 // HINT: Use a while or for loop.
-// NOTE: When printing numbers, each number can be in its own line. They don't have to be separated by a space.
+// NOTE: When printing numbers, each number can be in its own line. They don't
+// have to be separated by a space.
 // For example, the printout for printFactors(10); can be:
 
 // 1
@@ -62,13 +213,14 @@ public class PerfectNumber {
 // 5
 // 10
 
-// NOTE: The method printFactors should be defined as public static like we have been doing so far in the course.
+// NOTE: The method printFactors should be defined as public static like we have
+// been doing so far in the course.
 // NOTE: Do not add a main method to the solution code.
 
 public class FactorPrinter {
-    public static void printFactors (int named) {
+    public static void printFactors(int named) {
         if (named < 1) {
-           System.out.println("Invalid Value");
+            System.out.println("Invalid Value");
         } else {
             for (int i = 1; i <= named; i++) {
                 if (named % i == 0) {
@@ -79,37 +231,53 @@ public class FactorPrinter {
     }
 }
 
-
-// Write a method named hasSharedDigit with two parameters of type int. 
-// Each number should be within the range of 10 (inclusive) - 99 (inclusive). If one of the numbers is not within the range, the method should return false.
-// The method should return true if there is a digit that appears in both numbers, such as 2 in 12 and 23; otherwise, the method should return false.
+// Write a method named hasSharedDigit with two parameters of type int.
+// Each number should be within the range of 10 (inclusive) - 99 (inclusive). If
+// one of the numbers is not within the range, the method should return false.
+// The method should return true if there is a digit that appears in both
+// numbers, such as 2 in 12 and 23; otherwise, the method should return false.
 
 // EXAMPLE INPUT/OUTPUT:
-// * hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
-// * hasSharedDigit(9, 99); → should return false since 9 is not within the range of 10-99
-// * hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
+// * hasSharedDigit(12, 23); → should return true since the digit 2 appears in
+// both numbers
+// * hasSharedDigit(9, 99); → should return false since 9 is not within the
+// range of 10-99
+// * hasSharedDigit(15, 55); → should return true since the digit 5 appears in
+// both numbers
 
-// NOTE: The method hasSharedDigit should be defined as public static like we have been doing so far in the course.
-// Write a method named getGreatestCommonDivisor with two parameters of type int named first and second. 
-// If one of the parameters is < 10, the method should return -1 to indicate an invalid value.
-// The method should return the greatest common divisor of the two numbers (int).
-// The greatest common divisor is the largest positive integer that can fully divide each of the integers (i.e. without leaving a remainder).
+// NOTE: The method hasSharedDigit should be defined as public static like we
+// have been doing so far in the course.
+// Write a method named getGreatestCommonDivisor with two parameters of type int
+// named first and second.
+// If one of the parameters is < 10, the method should return -1 to indicate an
+// invalid value.
+// The method should return the greatest common divisor of the two numbers
+// (int).
+// The greatest common divisor is the largest positive integer that can fully
+// divide each of the integers (i.e. without leaving a remainder).
 
 // For example 12 and 30:
 // 12 can be divided by 1, 2, 3, 4, 6, 12
 // 30 can be divided by 1, 2, 3, 5, 6, 10, 15, 30
-// The greatest common divisor is 6 since both 12 and 30 can be divided by 6, and there is no resulting remainder.
+// The greatest common divisor is 6 since both 12 and 30 can be divided by 6,
+// and there is no resulting remainder.
 
 // EXAMPLE INPUT/OUTPUT:
-// * getGreatestCommonDivisor(25, 15); should return 5 since both can be divided by 5 without a remainder
-// * getGreatestCommonDivisor(12, 30); should return 6 since both can be divided by 6 without a remainder
-// * getGreatestCommonDivisor(9, 18); should return -1 since the first parameter is < 10
-// * getGreatestCommonDivisor(81, 153); should return 9 since both can be divided by 9 without a remainder
+// * getGreatestCommonDivisor(25, 15); should return 5 since both can be divided
+// by 5 without a remainder
+// * getGreatestCommonDivisor(12, 30); should return 6 since both can be divided
+// by 6 without a remainder
+// * getGreatestCommonDivisor(9, 18); should return -1 since the first parameter
+// is < 10
+// * getGreatestCommonDivisor(81, 153); should return 9 since both can be
+// divided by 9 without a remainder
 
-// HINT: Use a while or a for loop and check if both numbers can be divided without a remainder.
+// HINT: Use a while or a for loop and check if both numbers can be divided
+// without a remainder.
 // HINT: Find the minimum of the two numbers.
 
-// NOTE: The method getGreatestCommonDivisor should be defined as public static like we have been doing so far in the course.
+// NOTE: The method getGreatestCommonDivisor should be defined as public static
+// like we have been doing so far in the course.
 // NOTE: Do not add a main method to the solution code.
 
 public class GreatestCommonDivisor {
