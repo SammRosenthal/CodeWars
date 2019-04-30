@@ -1,4 +1,61 @@
+// -Read 10 numbers from the console entered by the user and print the sum of those numbers.
+// -Create a Scanner like we did in the previous video.
+// -Use the hasNextInt() method from the scanner to check if the user has entered an int value.
+// -If hasNextInt() returns false, print the message gInvalid Numberh. Continue reading until you have read 10 numbers.
+// -Use the nextInt() method to get the number and add it to the sum.
+// -Before the user enters each number, print the message gEnter number #x:h where x represents the count, i.e. 1, 2, 3, 4, etc.
+// -For example, the first message printed to the user would be gEnter number #1:h, the next gEnter number #2: h, and so on.
 
+// Hint: 
+// -Use a while loop.
+// -Use a counter variable for counting valid numbers.
+// -Close the scanner after you donft need it anymore.
+// -Create a project with the name ReadingUserInputChallenge.
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numbersEntered = 1;
+        int sum = 0;
+
+        while (numbersEntered < 11) {
+            System.out.println("Enter number #" + numbersEntered + ":");
+            boolean validNumber = scanner.hasNextInt();
+            int currentNumber = scanner.nextInt();
+
+            if (validNumber) {
+                sum += currentNumber;
+
+            } else {
+                System.out.println();
+            }
+
+            numbersEntered++;
+        }
+
+        System.out.println("The sum of your numbers is " + sum + ".");
+        scanner.close();
+
+    }
+}
+
+
+// Write a method named getLargestPrime with one parameter of type int named number. 
+// If the number is negative or does not have any prime numbers, the method should return -1 to indicate an invalid value.
+// The method should calculate the largest prime factor of a given number and return it.
+
+// EXAMPLE INPUT/OUTPUT:
+// * getLargestPrime (21); should return 7 since 7 is the largest prime (3 * 7 = 21)
+// * getLargestPrime (217); should return 31 since 31 is the largest prime (7 * 31 = 217)
+// * getLargestPrime (0); should return -1 since 0 does not have any prime numbers
+// * getLargestPrime (45); should return 5 since 5 is the largest prime (3 * 3 * 5 = 45)
+// * getLargestPrime (-1); should return -1 since the parameter is negative
+
+// HINT: Since the numbers 0 and 1 are not considered prime numbers, they cannot contain prime numbers.
+// NOTE: The method getLargestPrime should be defined as public static like we have been doing so far in the course.
+// NOTE: Do not add a main method to the solution code.
 
 public class LargestPrime {
     public static int getLargestPrime(int number){
