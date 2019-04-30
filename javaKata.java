@@ -1,3 +1,22 @@
+
+
+public class LargestPrime {
+    public static int getLargestPrime(int number){
+        if(number <= 1){
+            return -1;
+        }
+        int i = number;
+        while(i > 1){
+          if(number % i == 0){
+          number = i;
+    }
+      i--;
+        }return number;
+      
+    }
+} 
+
+
 // Write a method named canPack with three parameters of type int named bigCount, smallCount, and goal. 
 // The parameter bigCount represents the count of big flour bags (5 kilos each).
 // The parameter smallCount represents the count of small flour bags (1 kilo each).
