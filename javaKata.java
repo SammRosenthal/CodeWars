@@ -1,3 +1,47 @@
+
+
+public class SimpleCalculator {
+    private double firstNumber;
+    private double secondNumber;
+    
+    public double getFirstNumber(){
+        return this.firstNumber;
+    }
+    
+    public double getSecondNumber(){
+        return this.secondNumber;
+    }
+    
+    public void setFirstNumber(double firstNumber){
+        this.firstNumber = firstNumber;
+    }
+    
+    public void setSecondNumber(double secondNumber){
+        this.secondNumber = secondNumber;
+    }
+    
+    public double getAdditionResult(){
+        return (this.firstNumber + this.secondNumber);
+    }
+    
+    public double getSubtractionResult(){
+        return this.firstNumber - this.secondNumber;
+    }
+    
+    public double getMultiplicationResult(){
+        return this.firstNumber * this.secondNumber;
+    }
+    
+    public double getDivisionResult(){
+        if (this.secondNumber == 0) {
+            return 0;
+        }
+        
+        return this.firstNumber / this.secondNumber;
+    }
+}
+
+
 // Write a method called inputThenPrintSumAndAverage that does not have any parameters.
 // The method should not return anything (void) and it needs to keep reading int numbers from the keyboard.
 // When the user enters something that is not an int then it needs to print a message in the format "SUM = XX AVG = YY".
