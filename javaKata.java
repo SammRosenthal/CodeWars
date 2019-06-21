@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int. 
 // Write the following methods (instance methods):
 
@@ -184,7 +183,6 @@ public class SimpleCalculator {
 // Write a method called inputThenPrintSumAndAverage that does not have any parameters.
 // The method should not return anything (void) and it needs to keep reading int numbers from the keyboard.
 // When the user enters something that is not an int then it needs to print a message in the format "SUM = XX AVG = YY".
-=======
 // Bob is a wall painter and he needs your help. You have to write a program that helps Bob calculate how many buckets of paint he needs to buy before going to work. Bob might also have some extra buckets at home. He also knows the area that he can cover with one bucket of paint.
 // 1. Write a method named getBucketCount with 4 parameters. The first parameter should be named width of type double. This parameter represents the width of the wall.
 // The second parameter should be named height of type double. This parameter represents the height of the wall.
@@ -254,7 +252,6 @@ public class PaintJob {
 // numbers from the keyboard.
 // When the user enters something that is not an int then it needs to print a
 // message in the format "SUM = XX AVG = YY".
->>>>>>> d3f18bc89b53dd1595ac8d833bf14098327c5208
 // XX represents the sum of all entered numbers of type int.
 // YY represents the calculated average of all numbers of type long.
 
