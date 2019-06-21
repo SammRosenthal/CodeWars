@@ -1,3 +1,67 @@
+// Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+
+ 
+
+// Example 1:
+
+// Input: "Hello"
+// Output: "hello"
+// Example 2:
+
+// Input: "here"
+// Output: "here"
+// Example 3:
+
+// Input: "LOVELY"
+// Output: "lovely"
+
+class Solution {
+    public String toLowerCase(String str) {
+        
+        Map<Character, Character> library = new HashMap<Character, Character>();
+        
+        library.put('A', 'a');
+        library.put('B', 'b');
+        library.put('C', 'c');
+        library.put('D', 'd');
+        library.put('E', 'e');
+        library.put('F', 'f');
+        library.put('G', 'g');
+        library.put('H', 'h');
+        library.put('I', 'i');
+        library.put('J', 'j');
+        library.put('K', 'k');
+        library.put('L', 'l');
+        library.put('M', 'm');
+        library.put('N', 'n');
+        library.put('O', 'o');
+        library.put('P', 'p');
+        library.put('Q', 'q');
+        library.put('R', 'r');
+        library.put('S', 's');
+        library.put('T', 't');
+        library.put('U', 'u');
+        library.put('V', 'v');
+        library.put('W', 'w');
+        library.put('X', 'x');
+        library.put('Y', 'y');
+        library.put('Z', 'z');
+        
+        String answer = "";
+            
+        for (int i = 0; i < str.length(); i++){
+            char current = str.charAt(i);
+            if (Character.isUpperCase(current)) {
+                answer += library.get(current);
+            } else { 
+                answer+=current;
+            }
+        }
+        return answer;
+    }
+}
+
+
 // Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int. 
 // Write the following methods (instance methods):
 
