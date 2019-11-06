@@ -1,16 +1,23 @@
-// Gary is an avid hiker. He tracks his hikes meticulously, paying close attention to small details like topography. During his last hike he took exactly  steps. For every step he took, he noted if it was an uphill, , or a downhill,  step. Gary's hikes start and end at sea level and each step up or down represents a  unit change in altitude. We define the following terms:
 
-// A mountain is a sequence of consecutive steps above sea level, starting with a step up from sea level and ending with a step down to sea level.
-// A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level.
-// Given Gary's sequence of up and down steps during his last hike, find and print the number of valleys he walked through.
+/ Given an integer, , find and prit the number o xamle, ifte tig  and , te susriptioner
 
-// For example, if Gary's path is , he first enters a valley  units deep. Then he climbs out an up onto a mountain  units high. Finally, he returns to sea level and ends his hike.
+: a string to repeat
+: the number of characters to considr Format 
 
-// Function Description
+// The first line contains a single string, .
+// The second line contains an integer, .
+ 
+ static int leftOverChars(String s, int remainder) {
+        int bonusA = 0;
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') {
+                bonusA++;
+            }
+       } 
 
-/ Complete the countinVlleys function in the editor below. tmu  return an integer ta d es thenumbe f valleys Gary t
+ // omplet herpatdStrniclong repeteStrigchrInStri    interChr  (nt)  log ut iker. a sequence o cnsi ary' l
 
-ouningVales a hefollwmber of steps Gaytakesngdescribing his pah eond i
+implete the countinVll
 
 hvbchar[] steps = s.toCh
     for (int i = 0; i < n; i++) {
@@ -20,9 +27,8 @@ hvbchar[] steps = s.toCh
                 inValley = false;
                 valleyCounter += 1;
             }
-        } else {
-            heightToSeaLevel = heightToSeaLevel - 1;
-            i
+        } els
+
 
         }
     }
@@ -157,25 +163,26 @@ class Solution {
     
 // To check if s String is empty, use the method isEmpty from the String class. For example, firstName.isEmpty() returns true if the String is empty or in other words, when the String does not contain any characters.
 
-// TEST CODE:
-// Pe
 
-    ystem.out.printl
+    e
 
-    erson.setFirstName("John");     // firstName is set to John
-// person.setAge(18);
+    y
+
+    n.setAge(18);
+
+    
 // Sy
 
-    n.setLastName("Smit
-
-    
-    ullName= 
-// te
-
-    mith 
+    n
 
     
 
+    e
+
+    
+
+    
+    
 
     
 
@@ -202,84 +209,40 @@ class Solution {
         if (age < 0 || age > 100) {
          
 
-            this.age = age;
- 
-
-    public boolean isTeen(){
-// 
-// 
-        if (this.age > 12 && this.age < 20) {
-            rturn tre;
 
     
-          
+        this.age = age;
+    
+    
         
-        rn false;
+    olean
+    i
         
+    
+
+              
+        
+         
+
+    
+      
           
+    
+    
     
     }
 // 
-    
-// 
 
-    
-
-    i
-
-    
-// 
-        } else if (this.firstName.isEmpty()) {
-            return this.lastName;
-        } else if (this.lastName.isEmpty()){
-            return this.firstName;
-            } else {
-                return this.firstName + " " + this.lastName;
-        }
      
 
-    
-
-// Wri te a class with the name SimpleCalculator. The class nee
-
-    Meth
-    d named getFi
-    stNumber with t any para
-    // *Method named getSecondNumber without any parameters, 
-
-    
-    E
-
-    lator.setFirstNumber(5.0)a
-
-    alcul
-
-       ubtract= 1.0 
-// multiply= 0.0
-// di
-
-    IPS: 
-
-    //
-    
-        multiply= 0.0 is printed because 5.25 * 0 is 0.0 
-// *divide= 0.0 is printed because secondNumber is set to 0
-
-
-    OT
-    OT
-    
-
-    ate double firstNumber; 
-    pr
-
-    
       
-    }
     
 
-      
+    
 
+    
+
+    
     
     publi 
          
@@ -305,56 +268,75 @@ class Solution {
     
     
     
-    
+ 
+
+      
+
+      
+
+        
     // 
-// 
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
+        
+        
+        
+        // 
+                }
     // 
-            }
-            
-// 
-    
-    
-    
-    
-    
-            return this.firstNumber / this.secondNumber;
     // 
       
+
+      
+
+      
+      
+
+      
+         
     // 
+        // 
+        // 
     // 
-}
+    }
+    // 
+    
+        
+    
+        
+    // 
+    
+    // 
+
+    
+    
+    
+    
+    
+    
+
+            // 
+    
     
     
 
     
-// 
 
-// 
+    // The method should not return anything (void) and it needs to keep readin
+    // numbers from the 
+    //
+    // a message in the format "SUM = XX AVG = YY".
+    // ob is a wall painter and he needs your help. You have 
+    // at helps Bob calculate how many buckets of paint he needs to buy before going
+    // to work. Bob might also have some extra buckets at home. He also knows the 
+    // rea that he can cover with one b
+    // 1. Write a method named getBucketCount with 4 parameters. The first paramet
+    // r should be named width of type double. This parameter represe
+    // The second parameter should be named height of type double. This paramet
+    // r 
 
-// Write a method called inputThenPrintSumAndAverage that does not have any parameters.
-// The method should not return anything (void) and it needs to keep reading int
-// numbers from the keyboard.
-// When the user enters something that is not an int then it needs to print
-// a message in the format "SUM = XX AVG = YY".
-// Bob is a wall painter and he needs your help. You have to write a program t
-// at helps Bob calculate how many buckets of paint he needs to buy before going to work. Bob might also have some extra buckets at home. He also knows the area that he can cover with one bucket of paint.
-// 1. Write a method named getBucketCount with 4 parameters. The first parameter should be named width of type double. This parameter represents the width of the wall.
-// The second parameter should be named height of type double. This parameter 
-// epresents the height of the wall.
-// The third parameter should be named areaPerBucket. This parameter repr
-// sents the area that can be covered with one bucket of paint.
-// The fourth parameter should be named extraBuckets. This parameter represents
+     the area that can be covered with one bucket of paint.
+
+    h parameter should be named extraBuckets. This parameter represents
 // the bucket count that Bob has at home.
 // 
 // The method needs to return a value of type int that represents the number
@@ -365,7 +347,8 @@ class Solution {
 
 // Examples of input/output:
 // 
-// *getBucketCount(-3.4, 2.1, 1.5, 2); → should return -1 since the width parame
+
+    tCount(-3.4, 2.1, 1.5, 2); → should return -1 since the width parame
 // er is invalid
 // *getBucketCount(3.4, 2.1, 1.5, 2); → should return 3 since the wall area is
 // 7.14, a single bucket can cover an area of 1.5 and Bob has 2 extra buckets home.
@@ -1538,22 +1521,20 @@ public class PlayingCat {
             case 3:
                 System.out.println("Wednesday");
                 break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
+
+                k;
+            :
+            System.out.println("Friday");
                 break;
             case 6:
                 System.out.println("Saturday");
                 break;
             default:
-                System.out.println("Invalid Day");
-            }
-        }
+                System.out.println
 
-        public static void printDayOfTheWeekElse(int day) {
-            if (day == 0) {
+                
+            t
+        if (day == 0) {
                 System.out.println("Sunday");
             } else if (day == 1) {
                 System.out.println("Monday");
@@ -1877,61 +1858,51 @@ public static double calculateInterest(double amount, double interestRate){
 
     public class SumOddRange {
 
-        public static boolean isOdd(int number) {
-            if (number <= 0) {
-                return false;
-            }
 
-            if (number % 2 != 0) {
-                return true;
-            }
+     
 
-            return false;
-        }
+    p
 
-        public static int sumOdd(int start, int end) {
-            int sumOfOdd = 0;
-
-            if (end < start || end < 0 || start < 0) {
-                return -1;
-            }
-
-            for (int i = start; i <= end; i++) {
-                if (isOdd(i)) {
-                    sumOfOdd += i;
-                }
-            }
-
-            return sumOfOdd;
-        }
     }
-
-    // Write a method with the name sumDigits that has one int parameter called
-    // number.
-
-    // If parameter is >= 10 then the method should process the number and return
-    // sum of all digits, otherwise return -1 to indicate an invalid value.
-
-    // The numbers from 0-9 have 1 digit so we donft want to process them, also we
-    // donft want to process negative numbers, so also return -1 for negative
-    // numbers.
-
-    // For example calling the method sumDigits(125) should return 8 since 1 + 2 + 5
-    // = 8.
-
-        // Calling the 
+    
 
         
-            dd some code to the main method to te
+
+    }
+    
+    
+    
+
+    
+    
+    
+    
+
+    r.
+
+    
+    
+    
+    
+    
+    // The numbers from 0-9 have 1 digit so we donft want to process them, also we
+    // donft
+
+    
+    
+    // For example calling the method sumDigits(125) should return 8 since 1 + 2 + 5
+    // = 
+
+
+        dd some code to the mai ethod to t
         /
 
         
             int:
 
-            se n = n / 10 to dis
-                ethod needs to be s
-                
-            i
+         
+
+             
 
             lassMain { 
                 
