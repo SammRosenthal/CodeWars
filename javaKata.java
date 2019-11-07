@@ -35,6 +35,41 @@ static int sockMerchant(int n, int[] ar) {
     }
     
     return pairs;
+
+/ Given an integer, , find and prit the number o xamle, ifte tig  and , te susriptioner
+
+: a string to repeat
+: the number of characters to considr Format 
+
+// The first line contains a single string, .
+// The second line contains an integer, .
+ 
+ static int leftOverChars(String s, int remainder) {
+        int bonusA = 0;
+        for (int i = 0; i < remainder; i++) {
+            if (s.charAt(i) == 'a') {
+                bonusA++;
+            }
+       } 
+
+ // omplet herpatdStrniclong repeteStrigchrInStri    interChr  (nt)  log ut iker. a sequence o cnsi ary' l
+
+implete the countinVll
+
+hvbchar[] steps = s.toCh
+    for (int i = 0; i < n; i++) {
+        if (steps[i] == 'U') {
+            heightToSeaLevel = heightToSeaLevel + 1;
+            if (heightToSeaLevel >= 0 && inValley) {
+                inValley = false;
+                valleyCounter += 1;
+            }
+        } els
+
+
+        }
+    }
+    return valleyCounter;
 }
 
 // You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
@@ -47,9 +82,9 @@ static int sockMerchant(int n, int[] ar) {
 // Output: 3
 // Example 2:
 
-// Input: J = "z", S = "ZZ"
-// Output: 0
+
 // Note:
+// 
 
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct.
@@ -66,10 +101,10 @@ class Solution {
             }
         }
         
-        return count;
+
         
-    }
-}
+
+        
 
 
 // Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
@@ -95,51 +130,65 @@ class Solution {
         library.put('A', 'a');
         library.put('B', 'b');
         library.put('C', 'c');
-        library.put('D', 'd');
-        library.put('E', 'e');
-        library.put('F', 'f');
-        library.put('G', 'g');
+
+        library.put('E', 'e
+
+        library.put('G', 'g'); 
         library.put('H', 'h');
         library.put('I', 'i');
         library.put('J', 'j');
-        library.put('K', 'k');
-        library.put('L', 'l');
+        library.put(
+                put('L ',  'l');
         library.put('M', 'm');
         library.put('N', 'n');
         library.put('O', 'o');
         library.put('P', 'p');
-        library.put('Q', 'q');
-        library.put('R', 'r');
-        library.put('S', 's');
+ 
+
         library.put('T', 't');
+// 
+// 
         library.put('U', 'u');
         library.put('V', 'v');
         library.put('W', 'w');
+// 
         library.put('X', 'x');
+// 
         library.put('Y', 'y');
+// 
         library.put('Z', 'z');
+// 
         
+// 
         String answer = "";
+// 
+// 
             
+// 
+// 
         for (int i = 0; i < str.length(); i++){
-            char current = str.charAt(i);
-            if (Character.isUpperCase(current)) {
-                answer += library.get(current);
-            } else { 
+// 
+        char current = str.charAt(i);
+// 
+        if (Character.isUpperCase(current)) {
+            answer += library.get(current);
+
                 answer+=current;
+// 
+// 
             }
         }
         return answer;
-    }
-}
+    } 
+} 
 
 
 // Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int. 
-// Write the following methods (instance methods):
+// Write the following methods  tance methods):
 
 // *Method named getFirstName without any parameters, it needs to return the value of the firstName field.
 // *Method named getLastName without any parameters, it needs to return the value of the lastName field.
-// *Method named getAge without any parameters, it needs to return the value of the age field.
+// *Method named getAge without  parameters, it needs to return the value of the age field.
 // *Method named setFirstName with one parameter of type String, it needs to set the value of the firstName field.
 // *Method named setLastName with one parameter of type String, it needs to set the value of the lastName field.
 // *Method named setAge with one parameter of type int, it needs to set the value of the age field. If the parameter is less than 0 or greater than 100, it needs to set the age field value to 0.
@@ -151,221 +200,233 @@ class Solution {
     
 // To check if s String is empty, use the method isEmpty from the String class. For example, firstName.isEmpty() returns true if the String is empty or in other words, when the String does not contain any characters.
 
-// TEST CODE:
-// Person person = new Person();
-// person.setFirstName("");   // firstName is set to empty string
-// person.setLastName("");    // lastName is set to empty string
-// person.setAge(10);
-// System.out.println("fullName= " + person.getFullName());
-// System.out.println("teen= " + person.isTeen());
-// person.setFirstName("John");    // firstName is set to John
-// person.setAge(18);
-// System.out.println("fullName= " + person.getFullName());
-// System.out.println("teen= " + person.isTeen());
-// person.setLastName("Smith");    // lastName is set to Smith
-// System.out.println("fullName= " + person.getFullName());
 
-// OUTPUT
-// fullName=
-// teen= false
-// fullName= John
-// teen= true
-// fullName= John Smith
+    e
 
-// NOTE: All methods should be defined as public NOT public static.
-// NOTE: In total, you have to write 8 methods.
-// NOTE: Do not add the main method to the solution code.
+    y
 
-public class Person {
-    private String firstName;
-    private String lastName;
-    private int age;
+    n.setAge(18);
+
     
-    public String getFirstName(){
-        return this.firstName;
-    }
+// Sy
+
+    n
+
     
-    public String getLastName(){
-        return this.lastName;
+
+    e
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+        return this.lastNam e;
     }
     
     public int getAge(){
         return this.age;
     }
     
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
-    }
+
+        this.firstName = firstN ame;
+    } 
     
     public void setLastName(String lastName){
         this.lastName = lastName;
-    }
+    } 
     
     public void setAge(int age){
         if (age < 0 || age > 100) {
-            this.age = 0;
-        } else {
-            this.age = age;
-        }
-    }
+         
+
+
     
-    public boolean isTeen(){
-        if (this.age > 12 && this.age < 20) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+        this.age = age;
     
-    public String getFullName(){
-        if (this.firstName.isEmpty() && this.lastName.isEmpty()){
-            return "";
-        } else if (this.firstName.isEmpty()) {
-            return this.lastName;
-        } else if (this.lastName.isEmpty()){
-            return this.firstName;
-        } else {
-            return this.firstName + " " + this.lastName;
-        }
+    
         
-    }
-}
-
-
-// Write a class with the name SimpleCalculator. The class needs two fields (instance variables) with names firstNumber and secondNumber both of type double.
-// Write the following methods (instance methods):
-
-// *Method named getFirstNumber without any parameters, it needs to return the value of firstNumber field.
-// *Method named getSecondNumber without any parameters, it needs to return the value of secondNumber field.
-// *Method named setFirstNumber with one parameter of type double, it needs to set the value of the firstNumber field.
-// *Method named setSecondNumber with one parameter of type double, it needs to set the value of the secondNumberfield.
-// *Method named getAdditionResult without any parameters, it needs to return the result of adding the field values of firstNumber and secondNumber.
-// *Method named getSubtractionResult without any parameters, it needs to return the result of subtracting the field values of secondNumber from the firstNumber.
-// *Method named getMultiplicationResult without any parameters, it needs to return the result of multiplying the field values of firstNumber and secondNumber.
-// *Method named getDivisionResult without any parameters it needs to return the result of dividing the field values of firstNumber by the secondNumber. In case the value of secondNumber is 0 then return 0.
-
-// TEST CODE:
-
-// SimpleCalculator calculator = new SimpleCalculator();
-// calculator.setFirstNumber(5.0);
-// calculator.setSecondNumber(4);
-// System.out.println("add= " + calculator.getAdditionResult());
-// System.out.println("subtract= " + calculator.getSubtractionResult());
-// calculator.setFirstNumber(5.25);
-// calculator.setSecondNumber(0);
-// System.out.println("multiply= " + calculator.getMultiplicationResult());
-// System.out.println("divide= " + calculator.getDivisionResult());
-
-// OUTPUT
-
-// add= 9.0
-// subtract= 1.0
-// multiply= 0.0
-// divide= 0.0
-
-// TIPS:
-
-// *add= 9.0 is printed because 5.0 + 4 is 9.0
-// *subtract= 1.0 is printed because 5.0 - 4 is 1.0
-// *multiply= 0.0 is printed because 5.25 * 0 is 0.0
-// *divide= 0.0 is printed because secondNumber is set to 0
-
-// NOTE: All methods should be defined as public NOT public static.
-// NOTE: In total, you have to write 8 methods.
-// NOTE: Do not add the main method to the solution code.
-
-public class SimpleCalculator {
-    private double firstNumber;
-    private double secondNumber;
-    
-    public double getFirstNumber(){
-        return this.firstNumber;
-    }
-    
-    public double getSecondNumber(){
-        return this.secondNumber;
-    }
-    
-    public void setFirstNumber(double firstNumber){
-        this.firstNumber = firstNumber;
-    }
-    
-    public void setSecondNumber(double secondNumber){
-        this.secondNumber = secondNumber;
-    }
-    
-    public double getAdditionResult(){
-        return (this.firstNumber + this.secondNumber);
-    }
-    
-    public double getSubtractionResult(){
-        return this.firstNumber - this.secondNumber;
-    }
-    
-    public double getMultiplicationResult(){
-        return this.firstNumber * this.secondNumber;
-    }
-    
-    public double getDivisionResult(){
-        if (this.secondNumber == 0) {
-            return 0;
-        }
+    olean
+    i
         
-        return this.firstNumber / this.secondNumber;
+    
+
+              
+        
+         
+
+    
+      
+          
+    
+    
+    
     }
-}
+// 
 
+     
 
-// Write a method called inputThenPrintSumAndAverage that does not have any parameters.
-// The method should not return anything (void) and it needs to keep reading int numbers from the keyboard.
-// When the user enters something that is not an int then it needs to print a message in the format "SUM = XX AVG = YY".
-// Bob is a wall painter and he needs your help. You have to write a program that helps Bob calculate how many buckets of paint he needs to buy before going to work. Bob might also have some extra buckets at home. He also knows the area that he can cover with one bucket of paint.
-// 1. Write a method named getBucketCount with 4 parameters. The first parameter should be named width of type double. This parameter represents the width of the wall.
-// The second parameter should be named height of type double. This parameter represents the height of the wall.
-// The third parameter should be named areaPerBucket. This parameter represents the area that can be covered with one bucket of paint.
-// The fourth parameter should be named extraBuckets. This parameter represents the bucket count that Bob has at home.
-// The method needs to return a value of type int that represents the number of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
-// If one of the parameters width, height or areaPerBucket is less or equal to 0 or if extraBuckets is less than 0, the method needs to return -1 to indicate an invalid value.
+      
+    
+
+    
+
+    
+
+    
+    
+    publi 
+         
+
+    
+    
+
+    
+
+      
+    
+
+    
+    
+
+        
+    // 
+        public double getDivisionResult(){
+    // 
+        if 
+    this.second
+    umber == 0) {
+    
+    
+    
+ 
+
+      
+
+      
+
+        
+    // 
+        
+        
+        
+        
+        // 
+                }
+    // 
+    // 
+      
+
+      
+
+      
+      
+
+      
+         
+    // 
+        // 
+        // 
+    // 
+    }
+    // 
+    
+        
+    
+        
+    // 
+    
+    // 
+
+    
+    
+    
+    
+    
+    
+
+            // 
+    
+    
+    
+
+    
+
+    // The method should not return anything (void) and it needs to keep readin
+    // numbers from the 
+    //
+    // a message in the format "SUM = XX AVG = YY".
+    // ob is a wall painter and he needs your help. You have 
+    // at helps Bob calculate how many buckets of paint he needs to buy before going
+    // to work. Bob might also have some extra buckets at home. He also knows the 
+    // rea that he can cover with one b
+    // 1. Write a method named getBucketCount with 4 parameters. The first paramet
+    // r should be named width of type double. This parameter represe
+    // The second parameter should be named height of type double. This paramet
+    // r 
+
+     the area that can be covered with one bucket of paint.
+
+    h parameter should be named extraBuckets. This parameter represents
+// the bucket count that Bob has at home.
+// 
+// The method needs to return a value of type int that represents the number
+// of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
+// If one of the parameters width, height or areaPerBucket is less or equal
+// to 0 or if extraBuckets is less than 0, the method needs to return -1 to indicate an invalid value.
 // If all parameters are valid, the method needs to calculate the number of buckets and return it.
 
 // Examples of input/output:
-// *getBucketCount(-3.4, 2.1, 1.5, 2); → should return -1 since the width parameter is invalid
-// *getBucketCount(3.4, 2.1, 1.5, 2); → should return 3 since the wall area is 7.14, a single bucket can cover an area of 1.5 and Bob has 2 extra buckets home.
+// 
+
+    tCount(-3.4, 2.1, 1.5, 2); → should return -1 since the width parame
+// er is invalid
+// *getBucketCount(3.4, 2.1, 1.5, 2); → should return 3 since the wall area is
+// 7.14, a single bucket can cover an area of 1.5 and Bob has 2 extra buckets home.
 // *getBucketCount(2.75, 3.25, 2.5, 1); → should return 3 since the wall area is 8.9375, a single bucket can cover an area of 2.5 and Bob has 1 extra bucket at home.
 
-// 2. Bob does not like to enter 0 for the extraBuckets parameter so he needs another method.
-// Write another overloaded method named getBucketCount with 3 parameters namely width, height, and areaPerBucket (all of type double).
+// 2. Bob does not like to enter 0 for the extraBuckets parameter so he nee
+// s another method.
+// 
+// Write another overloaded method named getBucketCount with 3 parameters namel
+//  width, height, and areaPerBucket (all of type double).
 // This method needs to return a value of type int that represents the number of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
 // If one of the parameters width, height or areaPerBucket is less or equal to 0, the method needs to return -1 to indicate an invalid value.
 // If all parameters are valid, the method needs to calculate the number of buckets and return it.
 
-// Examples of input/output:
-// *getBucketCount(-3.4, 2.1, 1.5); → should return -1 since the width parameter is invalid
-// *getBucketCount(3.4, 2.1, 1.5); → should return 5 since the wall area is 7.14, and a single bucket can cover an area of 1.5.
-// *getBucketCount(7.25, 4.3, 2.35); → should return 14 since the wall area is 31.175, and a single bucket can cover an area of 2.35.
 
-// 3. In some cases, Bob does not know the width and height of the wall but he knows the area of a wall. He needs you to write another method.
-// Write another overloaded method named getBucketCount with 2 parameters namely, area and areaPerBucket (both of type double).
-// The method needs to return a value of type int that represents the number of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
-// If one of the parameters area or areaPerBucket is less or equal to 0, the method needs to return -1to indicate an invalid value.
-// If all parameters are valid, the method needs to calculate the number of buckets and return it.
+        etBucketCount(-3.4, 2.1, 1.5); → should return -1 since the width parameter is inv
+            cketCount(
+        e
+            
+         In some cases, Bob does not know the w
+    /
 
-// Examples of input/output:
-// *getBucketCount(3.4, 1.5); → should return 3 since the area is 3.4 and a single bucket can cover an area of 1.5
-// *getBucketCount(6.26, 2.2); → should return 3 since the wall area is 6.26 and a single bucket can cover an area of 2.2.
-// *getBucketCount(3.26, 0.75); → should return 5 since the wall area is 3.26, and a single bucket can cover an area of 0.75 .
-// Do your best to help Bob.
+    / If one of the parameters area or areaPerBucket is less or equal to 0, the method ne
+         all parameters are valid, the method needs to calculat
+    
 
-// NOTE: Use the method Math.ceil to round the number of calculated buckets (double) then convert it into an int before returning the value from the methods.
-// NOTE: All methods should be defined as public static like we have been doing so far in the course.
-// NOTE: Do not add the main method to the solution code.
+    / *getBucketCount(3.4, 1.5); → should return 3 since the area is 3.4 
+        etBucketCount(6.26, 2.2); → should retur n
+  
 
+          
+    /
+/ 
+
+ 
 public class PaintJob {
     public static int getBucketCount(double width, double height, double areaPerBucket, int extraBuckets) {
   
      if ((width <= 0) || (height <= 0) || (areaPerBucket <= 0) || (extraBuckets < 0)) {
-         return -1;
-     }
+  
+    }
      int bucketNeedForJob = (int) Math.ceil((width*height)/areaPerBucket);
      return bucketNeedForJob - extraBuckets;
  }
@@ -1497,22 +1558,20 @@ public class PlayingCat {
             case 3:
                 System.out.println("Wednesday");
                 break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
+
+                k;
+            :
+            System.out.println("Friday");
                 break;
             case 6:
                 System.out.println("Saturday");
                 break;
             default:
-                System.out.println("Invalid Day");
-            }
-        }
+                System.out.println
 
-        public static void printDayOfTheWeekElse(int day) {
-            if (day == 0) {
+                
+            t
+        if (day == 0) {
                 System.out.println("Sunday");
             } else if (day == 1) {
                 System.out.println("Monday");
@@ -1525,11 +1584,11 @@ public class PlayingCat {
             } else if (day == 5) {
                 System.out.println("Friday");
             } else if (day == 6) {
-                System.out.println("Saturday");
-            } else {
-                System.out.println("Invalid Day");
+ 
+
+                    System.out.println("Invalid Day"); 
+                  }  
             }
-        }
     }
 
     // For loop calculating interest printing to console
@@ -1836,70 +1895,59 @@ public static double calculateInterest(double amount, double interestRate){
 
     public class SumOddRange {
 
-        public static boolean isOdd(int number) {
-            if (number <= 0) {
-                return false;
-            }
 
-            if (number % 2 != 0) {
-                return true;
-            }
+     
 
-            return false;
-        }
+    p
 
-        public static int sumOdd(int start, int end) {
-            int sumOfOdd = 0;
-
-            if (end < start || end < 0 || start < 0) {
-                return -1;
-            }
-
-            for (int i = start; i <= end; i++) {
-                if (isOdd(i)) {
-                    sumOfOdd += i;
-                }
-            }
-
-            return sumOfOdd;
-        }
     }
+    
 
-    // Write a method with the name sumDigits that has one int parameter called
-    // number.
+        
 
-    // If parameter is >= 10 then the method should process the number and return
-    // sum of all digits, otherwise return -1 to indicate an invalid value.
+    }
+    
+    
+    
 
+    
+    
+    
+    
+
+    r.
+
+    
+    
+    
+    
+    
     // The numbers from 0-9 have 1 digit so we donft want to process them, also we
-    // donft want to process negative numbers, so also return -1 for negative
-    // numbers.
+    // donft
 
+    
+    
     // For example calling the method sumDigits(125) should return 8 since 1 + 2 + 5
-    // = 8.
+    // = 
 
-    // Calling the method sumDigits(1) should return -1 as per requirements
-    // described above.
 
-    // Add some code to the main method to test out the sumDigits method to
-    // determine that it is working correctly for valid and invalid values passed as
-    // arguments.
+        dd some code to the mai ethod to t
+        /
 
-    // Hint:
-    // Use n % 10 to extract the least-significant digit.
-    // Use n = n / 10 to discard the least-significant digit.
-    // The method needs to be static like other methods so far in the course.
+        
+            int:
 
-    // Tip:
-    // Create a project with the name DigitSumChallenge.
+         
 
-public class Main {
+             
 
-    public static void main(String[] args) {
-        System.out.println(sumDigits(12345));
-    }
+            lassMain { 
+                
+            ic stati
+                em.out.pri
+            
 
-    public static int sumDigits ( int number ) {
+        public static int sumDigits ( int number ) {
         int sum = 0;
 
         while (number > 0) {
