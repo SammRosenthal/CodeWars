@@ -1,44 +1,40 @@
-static int minimumSwaps(int[] arr) {
-       int answer  ; 
-        for (int i = 0; i < arr.length; i++) {
-           int lowe           int index = arr.length - 1;
+static nt m        int answer  ;  for (int =   nt low       int index= ar.chant // John works at a clothing store. He has a large pile of socks that he must pair them by color for sale.
+// You will be given an array of integers representing the color of each sock. Determine how many pairs of
+// socks with matching colors there are.
+// John works at a clothing store and he's going through a pile of socks to find the number of matching pairs.
+// More specifically, he has a pile of loose socks where each sock is labeled with an integer, , denoting
+// its color. He wants to sell as many socks as possible, but his customers will only buy them in matching
+// pairs. Two socks, and , are a single matching pair if they have the same color ( ).
+// Given and the color of each sock, how many pairs of socks can John sell?
+// Input Format
+// The first line contains an integer , the number of socks.
+// The second line contains space-separated integers describing the colors of the socks in the pile.
 
-                if (arr[j] < lowest) {
-                    lowest = arr[j];
 
-                   answer++;        }       if(}em.out.pri 
 
-           System.out.println(Arrays.toString(arr));
-        }
-        return answer;
-    }
- aninteger,  fnd ado epeatcharactesto con eond
+    Integer pairs = 0;for (int i :ar) {    if (sockDaer       sokrawr} lse {sockDrawer.put(i,1);}f
 
-i         if (s.charAt(                bonusA++;
-            }
+       if (sockDrawrget(entry.getKey()) > )       sockr   pairs += 1;se {break}r
+
+            i                   lowest = arr[j];
+
+  answer+;        
+
+
+
+e           
        } 
+ e
 
- // omplet herpatdStrniclong repeteStrigchrInStri    interChr  (nt)  log ut iker. a sequence o cnsi ary' l
-
-implete the countinVll
 
 hvbchar[] steps = s.toCh
     for (int i = 0; i < n; i++) {
         if (s
+           nVle =fals;    
 
-                inValley = false;
-                valleyCounter += 1;
-            }
-        } els
-
-
-        }
-    }
-    return valleyCounter;
 }
 
-// You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
-
+ou're given strings J
 // The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
 // Example 1:
@@ -49,7 +45,6 @@ hvbchar[] steps = s.toCh
 
 
 // Note:
-// 
 
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct.
@@ -197,21 +192,22 @@ class Solution {
     }
     
     public int getAge(){
-        return this.age;
-    }
+     
+
     
 
-        this.firstName = firstN ame;
-    } 
-    
-    public void setLastName(String lastName){
-        this.lastName = lastName;
-    } 
+     
+
+    ic void setLasN
+
+    me(String lastName){
+     
+
     
     public void setAge(int age){
-        if (age < 0 || age > 100) {
-         
+     
 
+    
 
     
         this.age = age;
@@ -265,8 +261,8 @@ class Solution {
     // 
         public double getDivisionResult(){
     // 
-        if 
-    this.second
+       
+    .second
     umber == 0) {
     
     
@@ -1510,63 +1506,27 @@ public class PlayingCat {
             switch (day) {
             case 0:
                 System.out.println("Sunday");
-                break;
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
+                brak;case 1:System.out.println("Monday");break;case 2:System.out.println("Tuesday")break;case 3:System.out.println("Wednesday"break;k;
 
-                k;
-            :
-            System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            default:
-     
+            brc    System.out.println("Saturbreak;default        
 
-                    
+                    yse
 
-                if (day == 0) {
+            
 
-                      } else if (day == 1)
-                          System.out.println("Monday");
-             
+            (day == 6) {
 
-         
+                   Sstemou.pi
 
-                    } else if (day == 4) { 
-                          System.out.print l n("Thu
-         
-
-                } else if (day == 6) {
-        
-        
-                        System.out.println("Invalid Day"); 
-                      }  
-
-        }
-        
+            
 
         
 
-        
-            nt i = 2; i <= 8; i++) {
-                .out.println(c
                 
+        
                     
-                    
-                
-                    uble calculateInterest(dou
-                     * (in
-                
-                    
+
+        
                     ethod 
                  is the
                     ", "OTHER" if the int parame
@@ -1577,11 +1537,13 @@ public class PlayingCat {
                  static
                     
                     not ad
-                
-                     NumberInWord {
-                    tatic 
-                switch 
-                     0:
+
+        
+
+        tatic 
+
+        0:
+        
                     System
                     bre
                      1:
@@ -1617,51 +1579,38 @@ public class PlayingCat {
 
         }
 
-        // Write a method isLeapYear with a parameter of type int named year.
 
-        // The parameter needs to be greater than or equal to 1 and less than or equa
-        // to 9999.
+    
 
-        // If the parameter is not in that range return false.
-        
+    // to 9999.
 
-        // and return true if it is, otherwise return fal
-        
+    // If the parameter is not in that range return false.
+    
 
-        // divisible by 400.
-        
+    // and return true if it is, otherwise return fal
 
-        
-        // * isLeapYear(-16
+    // divisible by 400.
 
-        
+    
 
-        
+    
 
-        
-        // * isLeapYear(2000); → should retur
+    // created the isLeapYear method. You
 
-        // ​NOTE: The solution to the Leap Year coding exercise earlier in the course
-        // created the isLeapYear method. You can use that s
+    // Write another method getDaysInMonth with two parameters month and year. ​B
+    // of type 
 
-        // Write another method getDaysInMonth with two parameters month and year. ​Bo
-        // of type 
+    // If parameter month is < 1 or > 12 return -1. ​
+    // If para
 
-        // If parameter month is < 1 or > 12 return -1. ​
-        // If parameter year is < 1 or > 9
+    // This method needs to return the
+    
 
-        // This method needs to return the
+    // You should check if the year is
 
-        
-        // You should check if the year is a lea
+    
 
-        
-
-        
-             getDaysInMonth(1, 2020); → should return 31
-                
-                    InMonth(2, 20
-                y
+       y
 
                 DaysInMonth(2, 2018); → should return 2
                     a leap year 
@@ -1761,45 +1710,37 @@ public class PlayingCat {
 
             public static boolean isPrime(int n) {
 
-                    return false;
-                }
+
+        }
 
                 for (int i = 2; i <= n / 2; i
 
-                        ret
 
+    
+    
                 }
 
-                return true;
-                
 
-                
-                    
-                        statement
-                        
-                        umbers that can be divided with both 3 and also wit
-                    
+    
 
-                    
+    
+
+    
+
+    
+    
+    
+    
+    
                         the lo
                     
                  
 
-                
 
-            
+    
 
-        
-
-        
-                int sum = 0;
-
-        
-
-                    if (i % 3 == 0 && i % 5 == 0) {
-
-                        numbersFound++;
-                        System.out.println(i +
+       Sse.otprnl( +
+    
 
         
                     if (numbersFound == 5) {
@@ -1814,27 +1755,20 @@ public class PlayingCat {
 
         
 
-        // method needs to return a boolean.
+    
 
-        // Check that number is > 0, if it is no
+    
 
-        // If number is odd return true, otherwi
+    // which repr
 
-        // Write a second method called sumOdd that has 2 int parameters start and end
-        // which repr
+    // The method should use a for loop to sum
+    
 
-        // The method should use a for loop to sum
+    
 
-        
+    nvalid input.
 
-        
-
-        // and end parameters have to be greater than 0.
-        
-        // If those conditions are not satisfied return -1 from the method to indicate
-    // invalid input.
-
-    // Example input/output:
+    xample input/output:
 
     // * sumOdd(1, 100); → should return 2500
 
@@ -1850,56 +1784,35 @@ public class PlayingCat {
     
 
     }
+
+ 
+
+
+
+
     
 
-            
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    // The numbers from 0-
-
-    
-    
-    // For example calling the method sumDigits(125) should return 8 since 1 + 2 + 5
-    // = 
 
 
-        dd some code to the mai ethod to t
-        /
 
-        
-            int:
+ 
 
-         
 
-             
 
-            lassMain { 
-                
-            ic stati
-                em.out.pri
-            
+    em.o
+t
 
-        public static int sumDigits ( int number ) {
-        int sum = 0;
+     tatic int 
 
-        while (number > 0) {
+    while (number > 0) {
             sum += number % 10;
             number = number / 10;
         }
 
 
-        if ( sum != 0 ){
-            return sum;
-        } else {
-            return -1;
+        i
+
+            eturn -1 
         }
 
     }
