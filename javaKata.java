@@ -1,17 +1,20 @@
+static int minimumSwaps(int[] arr) {
+       int answer  ; 
+        for (int i = 0; i < arr.length; i++) {
+           int lowe           int index = arr.length - 1;
 
-/ Given an integer, , find and prit the number o xamle, ifte tig  and , te susriptioner
+                if (arr[j] < lowest) {
+                    lowest = arr[j];
 
-: a string to repeat
-: the number of characters to considr Format 
+                   answer++;        }       if(}em.out.pri 
 
-// The first line contains a single string, .
-// The second line contains an integer, .
- 
- static int leftOverChars(String s, int remainder) {
-        int bonusA = 0;
-        for (int i = 0; i < remainder; i++) {
-            if (s.charAt(i) == 'a') {
-                bonusA++;
+           System.out.println(Arrays.toString(arr));
+        }
+        return answer;
+    }
+ aninteger,  fnd ado epeatcharactesto con eond
+
+i         if (s.charAt(                bonusA++;
             }
        } 
 
@@ -21,9 +24,8 @@ implete the countinVll
 
 hvbchar[] steps = s.toCh
     for (int i = 0; i < n; i++) {
-        if (steps[i] == 'U') {
-            heightToSeaLevel = heightToSeaLevel + 1;
-            if (heightToSeaLevel >= 0 && inValley) {
+        if (s
+
                 inValley = false;
                 valleyCounter += 1;
             }
@@ -170,20 +172,21 @@ class Solution {
 
     n.setAge(18);
 
-    
-// Sy
+
+    y
 
     n
 
     
 
+    
     e
 
     
 
     
-    
 
+    
     
 
     
@@ -276,29 +279,14 @@ class Solution {
 
         
     // 
-        
-        
-        
-        
-        // 
-                }
-    // 
-    // 
       
 
       
 
-      
-      
+    //
 
-      
-         
-    // 
-        // 
-        // 
-    // 
-    }
-    // 
+    
+
     
         
     
@@ -306,6 +294,11 @@ class Solution {
     // 
     
     // 
+    
+    
+    
+    
+    
 
     
     
@@ -314,7 +307,12 @@ class Solution {
     
     
 
-            // 
+                    // 
+    
+    
+    
+
+    
     
     
     
@@ -342,8 +340,9 @@ class Solution {
 // The method needs to return a value of type int that represents the number
 // of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
 // If one of the parameters width, height or areaPerBucket is less or equal
-// to 0 or if extraBuckets is less than 0, the method needs to return -1 to indicate an invalid value.
-// If all parameters are valid, the method needs to calculate the number of buckets and return it.
+// to 0 or if extraBuckets is less than 0, the method needs to return -1 to indicate an in
+
+    rameters are valid, the method needs to calculate the number of buckets and return it.
 
 // Examples of input/output:
 // 
@@ -1530,309 +1529,309 @@ public class PlayingCat {
                 System.out.println("Saturday");
                 break;
             default:
-                System.out.println
+     
+
+                    
+
+                if (day == 0) {
+
+                      } else if (day == 1)
+                          System.out.println("Monday");
+             
+
+         
+
+                    } else if (day == 4) { 
+                          System.out.print l n("Thu
+         
+
+                } else if (day == 6) {
+        
+        
+                        System.out.println("Invalid Day"); 
+                      }  
+
+        }
+        
+
+        
+
+        
+            nt i = 2; i <= 8; i++) {
+                .out.println(c
+                
+                    
+                    
+                
+                    uble calculateInterest(dou
+                     * (in
+                
+                    
+                    ethod 
+                 is the
+                    ", "OTHER" if the int parame
+                    ther n
+                ment or
+                    
+                    hod pr
+                 static
+                    
+                    not ad
+                
+                     NumberInWord {
+                    tatic 
+                switch 
+                     0:
+                    System
+                    bre
+                     1:
+                    System
+                    bre
+                     2:
+                    System
+                    brea
+                     3:
+                 
+             
+         
+
+                    break;
+
+                    System.out.println("FIVE");
+                   
+
+                    System.out.println("SIX");
+
+                case 7:
+                    System.out.println("SEVEN");
+
+                case 8:
+                    System.o
+
+                case 9:
+
+                    break;
+                default:
+
+                }
+
+        }
+
+        // Write a method isLeapYear with a parameter of type int named year.
+
+        // The parameter needs to be greater than or equal to 1 and less than or equa
+        // to 9999.
+
+        // If the parameter is not in that range return false.
+        
+
+        // and return true if it is, otherwise return fal
+        
+
+        // divisible by 400.
+        
+
+        
+        // * isLeapYear(-16
+
+        
+
+        
+
+        
+        // * isLeapYear(2000); → should retur
+
+        // ​NOTE: The solution to the Leap Year coding exercise earlier in the course
+        // created the isLeapYear method. You can use that s
+
+        // Write another method getDaysInMonth with two parameters month and year. ​Bo
+        // of type 
+
+        // If parameter month is < 1 or > 12 return -1. ​
+        // If parameter year is < 1 or > 9
+
+        // This method needs to return the
+
+        
+        // You should check if the year is a lea
+
+        
+
+        
+             getDaysInMonth(1, 2020); → should return 31
+                
+                    InMonth(2, 20
+                y
+
+                DaysInMonth(2, 2018); → should return 2
+                    a leap year 
+                
+                    InMonth(-1, 
+                id.
+                    
+                D
+            u
+
+            INT: Use the switch statement.
+                
+                    hods isLea
+                b
+
+                 Do not add a main method to solutio
+
+                lass NumberOfDaysInMonth {
+                    tatic bool
+                i
+
+                }
+                
+                    year % 4 =
+                    ret
+                    se if (yea
+                    ret
+                    se {
+                    ret
+                    
+                
+                    
+                ic stat
+                    month < 1 
+                    ret
+                    
+                
+                    ean leapYe
+                
+                    month == 2
+                    retu
+                    
+                
+                    ch (month)
+                case 1:
+                    return 31;
+                case 2:
+                    return 28;
+                c
+             
+         
+
+                case 5:
+                    return 31;
+                case 6:
+                    return 30;
+                case 7:
+                    return 31;
+
+                    return 
+
+                    return 30;
+                case 10:
+                    return 31;
+                     11:
+                        rn 30;
+                        
+                    r
+
+                    return -1;
+                        
+                    
+                
+            
+
+            etermine if the number is a prime numb
+                 is a prime n
+                     prime number
+                a
 
                 
-            t
-        if (day == 0) {
-                System.out.println("Sunday");
-            } else if (day == 1) {
-                System.out.println("Monday");
-            } else if (day == 2) {
-                System.out.println("Tuesday");
-            } else if (day == 3) {
-                System.out.println("Wednesday");
-            } else if (day == 4) {
-                System.out.println("Thursday");
-            } else if (day == 5) {
-                System.out.println("Friday");
-            } else if (day == 6) {
- 
+                     Main {
+                        
+                    t
+                i
 
-                    System.out.println("Invalid Day"); 
-                  }  
-            }
-    }
+                    if (isPr
+             
 
-    // For loop calculating interest printing to console
+         
 
-public static void main(String[] args) {
+                    if (primeNumbersFound == 3) {
 
-  for (int i = 2; i <= 8; i++) {
-      System.out.println(calculateInterest(10000, i));
-  }
+                    }
 
-}
-
-public static double calculateInterest(double amount, double interestRate){
-  return (amount * (interestRate/100));
-}
-
-    // Write a method called printNumberInWord. The method has one parameter number
-    // which is the whole number. The method needs to print "ZERO", "ONE", "TWO",
-    // ... "NINE", "OTHER" if the int parameter number is 0, 1, 2, .... 9 or other
-    // for any other number including negative numbers. You can use if-else
-    // statement or switch statement whatever is easier for you.
-
-    // NOTE: Method printNumberInWord needs to be public static for now, we are only
-    // using static methods.
-
-    // NOTE: Do not add main method to solution code.
-
-    public class NumberInWord {
-        public static void printNumberInWord(int num) {
-            switch (num) {
-            case 0:
-                System.out.println("ZERO");
-                break;
-            case 1:
-                System.out.println("ONE");
-                break;
-            case 2:
-                System.out.println("TWO");
-                break;
-            case 3:
-                System.out.println("THREE");
-                break;
-            case 4:
-                System.out.println("FOUR");
-                break;
-            case 5:
-                System.out.println("FIVE");
-                break;
-            case 6:
-                System.out.println("SIX");
-                break;
-            case 7:
-                System.out.println("SEVEN");
-                break;
-            case 8:
-                System.out.println("EIGHT");
-                break;
-            case 9:
-                System.out.println("NINE");
-                break;
-            default:
-                System.out.println("other");
-            }
-        }
-    }
-
-    // Write a method isLeapYear with a parameter of type int named year.
-
-    // The parameter needs to be greater than or equal to 1 and less than or equal
-    // to 9999.
-
-    // If the parameter is not in that range return false.
-
-    // Otherwise, if it is in the valid range, calculate if the year is a leap year
-    // and return true if it is, otherwise return false.
-
-    // A year is a leap year if it is divisible by 4 but not by 100, or it is
-    // divisible by 400.
-
-    // Examples of input/output:
-
-    // * isLeapYear(-1600); → should return false since the parameter is not in the
-    // range (1-9999)
-
-    // * isLeapYear(1600); → should return true since 1600 is a leap year
-
-    // * isLeapYear(2017); → should return false since 2017 is not a leap year
-
-    // * isLeapYear(2000); → should return true because 2000 is a leap year
-
-    // ​NOTE: The solution to the Leap Year coding exercise earlier in the course
-    // created the isLeapYear method. You can use that solution if you wish.
-
-    // Write another method getDaysInMonth with two parameters month and year. ​Both
-    // of type int.
-
-    // If parameter month is < 1 or > 12 return -1. ​
-    // If parameter year is < 1 or > 9999 then return -1.
-
-    // This method needs to return the number of days in the month. Be careful about
-    // leap years they have 29 days in month 2 (February).
-
-    // You should check if the year is a leap year using the method isLeapYear
-    // described above.
-
-    // Examples of input/output:
-
-    // * getDaysInMonth(1, 2020); → should return 31 since January has 31 days.
-
-    // * getDaysInMonth(2, 2020); → should return 29 since February has 29 days in a
-    // leap year and 2020 is a leap year.
-
-    // * getDaysInMonth(2, 2018); → should return 28 since February has 28 days if
-    // it's not a leap year and 2018 is not a leap year.
-
-    // * getDaysInMonth(-1, 2020); → should return -1 since the parameter month is
-    // invalid.
-
-    // * getDaysInMonth(1, -2020); → should return -1 since the parameter year is
-    // outside the range of 1 to 9999.
-
-    // HINT: Use the switch statement.
-
-    // NOTE: Methods isLeapYear and getDaysInMonth need to be public static like we
-    // have been doing so far in the course.
-
-    // NOTE: Do not add a main method to solution code.
-
-    public class NumberOfDaysInMonth {
-        public static boolean isLeapYear(int year) {
-            if (year < 1 || year > 9999) {
-                return false;
             }
 
-            if (year % 4 == 0 && year % 100 != 0) {
-                return true;
-            } else if (year % 400 == 0) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+            public static boolean isPrime(int n) {
 
-        public static int getDaysInMonth(int month, int year) {
-            if (month < 1 || month > 12 || year < 1 || year > 9999) {
-                return -1;
-            }
-
-            boolean leapYear = isLeapYear(year);
-
-            if (month == 2 && leapYear) {
-                return 29;
-            }
-
-            switch (month) {
-            case 1:
-                return 31;
-            case 2:
-                return 28;
-            case 3:
-                return 31;
-            case 4:
-                return 30;
-            case 5:
-                return 31;
-            case 6:
-                return 30;
-            case 7:
-                return 31;
-            case 8:
-                return 31;
-            case 9:
-                return 30;
-            case 10:
-                return 31;
-            case 11:
-                return 30;
-            case 12:
-                return 31;
-            default:
-                return -1;
-            }
-        }
-    }
-
-    // Create a for statement using any range of numbers
-    // Determine if the number is a prime number using the isPrime method
-    // if it is a prime number, print it out AND increment a count of the
-    // number of prime numbers found
-    // if that count is 3 exit the for loop
-    // hint: use the break; statement to exit
-
-    public class Main {
-
-        public static void main(String[] args) {
-            int primeNumbersFound = 0;
-            for (int i = 0; i < 10; i++) {
-                if (isPrime(i)) {
-                    System.out.println(i);
-                    primeNumbersFound++;
-                }
-
-                if (primeNumbersFound == 3) {
-                    break;
-                }
-            }
-        }
-
-        public static boolean isPrime(int n) {
-            if (n == 1) {
-                return false;
-            }
-
-            for (int i = 2; i <= n / 2; i++) {
-                if (n % i == 0) {
                     return false;
                 }
-            }
 
-            return true;
-        }
+                for (int i = 2; i <= n / 2; i
 
-    }
+                        ret
 
-    // Create a for statement using a range of numbers from 1 to 1000 inclusive.
-
-    // Sum all the numbers that can be divided with both 3 and also with 5.
-
-    // For those numbers that met the above conditions, print out the number.
-
-    // break out of the loop once you find 5 numbers that met the above conditions.
-
-    // After breaking out of the loop print the sum of the numbers that met the
-    // above conditions.
-
-    // Note: Type all code in main method
-
-    public class Main {
-
-        public static void main(String[] args) {
-
-            int sum = 0;
-            int numbersFound = 0;
-
-            for (int i = 1; i <= 1000; i++) {
-                if (i % 3 == 0 && i % 5 == 0) {
-                    sum += i;
-                    numbersFound++;
-                    System.out.println(i + " is divisible by 3 and 5");
                 }
 
-                if (numbersFound == 5) {
-                    break;
-                }
+                return true;
+                
+
+                
+                    
+                        statement
+                        
+                        umbers that can be divided with both 3 and also wit
+                    
+
+                    
+                        the lo
+                    
+                 
+
+                
+
+            
+
+        
+
+        
+                int sum = 0;
+
+        
+
+                    if (i % 3 == 0 && i % 5 == 0) {
+
+                        numbersFound++;
+                        System.out.println(i +
+
+        
+                    if (numbersFound == 5) {
+
+                    }
+
+        
+                System.out.println("The sum of the numbe
+
             }
+        
 
-            System.out.println("The sum of the numbers found is " + sum);
+        
 
-        }
+        // method needs to return a boolean.
 
-    }
+        // Check that number is > 0, if it is no
 
-    // Write a method called isOdd with an int parameter and call it number. The
-    // method needs to return a boolean.
+        // If number is odd return true, otherwi
 
-    // Check that number is > 0, if it is not return false.
+        // Write a second method called sumOdd that has 2 int parameters start and end
+        // which repr
 
-    // If number is odd return true, otherwise return false.
+        // The method should use a for loop to sum
 
-    // Write a second method called sumOdd that has 2 int parameters start and end,
-    // which represent a range of numbers.
+        
 
-    // The method should use a for loop to sum all odd numbers in that range
-    // including the end and return the sum.
+        
 
-    // It should call the method isOdd to check if each number is odd.
-
-    // The parameter end needs to be greater than or equal to start and both start
-    // and end parameters have to be greater than 0.
-
-    // If those conditions are not satisfied return -1 from the method to indicate
+        // and end parameters have to be greater than 0.
+        
+        // If those conditions are not satisfied return -1 from the method to indicate
     // invalid input.
 
     // Example input/output:
@@ -1841,52 +1840,30 @@ public static double calculateInterest(double amount, double interestRate){
 
     // * sumOdd(-1, 100); → should return -1
 
-    // * sumOdd(100, 100); → should return 0
+    /
 
-    // * sumOdd(13, 13); → should return 13 (This set contains one number, 13, and
-    // it is odd)
+    /
 
-    // * sumOdd(100, -100); → should return -1
-
-    // * sumOdd(100, 1000); → should return 247500
-
-    // TIP: use the remainder operator to check if the number is odd
-
-    // NOTE: Both methods needs to be defined as public static like we have been
-    // doing so far in the course.
-    // NOTE: Do not add a main method to solution code.
-
-    public class SumOddRange {
-
-
-     
-
-    p
+    pu
 
     }
     
 
-        
-
     }
     
+
+            
     
+    
+    
+
     
 
     
     
     
     
-
-    r.
-
-    
-    
-    
-    
-    
-    // The numbers from 0-9 have 1 digit so we donft want to process them, also we
-    // donft
+    // The numbers from 0-
 
     
     
