@@ -1,4 +1,13 @@
-static nt m        int answer  ;  for (int =   nt low       int index= ar.chant // John works at a clothing store. He has a large pile of socks that he must pair them by color for sale.
+public static String getSmallestAndLargest(String s,int k){String smallest=s.substring(0,k);String largest=s.substring(0,k);
+
+for(int i=0;i<s.length()-(k-1);i++){if(s.substring(i,k+i).compareTo(largest)>0){largest=s.substring(i,k+i);}if(s.substring(i,k+i).compareTo(smallest)<0){smallest=s.substring(i,k+i);}}`
+// Complete the function
+// 'smallest' must be the lexicographically smallest substring of length 'k'
+// 'largest' must be the lexicographically largest substring of length 'k'
+
+return smallest+"\n"+largest;}
+
+static nt m int answer;for(int=nt low int index=ar.chant // John works at a clothing store. He has a large pile of socks that he must pair them by color for sale.
 // You will be given an array of integers representing the color of each sock. Determine how many pairs of
 // socks with matching colors there are.
 // John works at a clothing store and he's going through a pile of socks to find the number of matching pairs.
@@ -10,27 +19,17 @@ static nt m        int answer  ;  for (int =   nt low       int index= ar.chant 
 // The first line contains an integer , the number of socks.
 // The second line contains space-separated integers describing the colors of the socks in the pile.
 
+Integer pairs=0;for(int i:ar){if(sockDaer sokrawr}lse{sockDrawer.put(i,1);}f
 
+if(sockDrawrget(entry.getKey())>)sockr pairs+=1;se{break}r
 
-    Integer pairs = 0;for (int i :ar) {    if (sockDaer       sokrawr} lse {sockDrawer.put(i,1);}f
+i lowest=arr[j];
 
-       if (sockDrawrget(entry.getKey()) > )       sockr   pairs += 1;se {break}r
+answer+;
 
-            i                   lowest = arr[j];
+e}e
 
-  answer+;        
-
-
-
-e           
-       } 
- e
-
-
-hvbchar[] steps = s.toCh
-    for (int i = 0; i < n; i++) {
-        if (s
-           nVle =fals;    
+hvbchar[]steps=s.toCh for(int i=0;i<n;i++){if(s nVle=fals;
 
 }
 
@@ -43,7 +42,6 @@ ou're given strings J
 // Output: 3
 // Example 2:
 
-
 // Note:
 
 // S and J will consist of letters and have length at most 50.
@@ -51,146 +49,113 @@ ou're given strings J
 
 class Solution {
     public int numJewelsInStones(String J, String S) {
-        String[] array2 = S.split("");
-        int count = 0;
-        
-        
-        for (String i : array2) {
-            if (J.contains(i)) {
-                count++;
-            }
-        }
-        
+        String[]array2=S.split("");int count=0;
 
-        
+        for(String i:array2){if(J.contains(i)){count++;}}
 
-        
+        // Implement function ToLowerCase() that has a string parameter str, and returns
+        // the same string in lowercase.
 
+        // Example 1:
 
-// Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+        // Input: "Hello"
+        // Output: "hello"
+        // Example 2:
 
-// Example 1:
+        // Input: "here"
+        // Output: "here"
+        // Example 3:
 
-// Input: "Hello"
-// Output: "hello"
-// Example 2:
+        // Input: "LOVELY"
+        // Output: "lovely"
 
-// Input: "here"
-// Output: "here"
-// Example 3:
+        class Solution{public String toLowerCase(String str){
 
-// Input: "LOVELY"
-// Output: "lovely"
+        Map<Character,Character>library=new HashMap<Character,Character>();
 
-class Solution {
-    public String toLowerCase(String str) {
-        
-        Map<Character, Character> library = new HashMap<Character, Character>();
-        
-        library.put('A', 'a');
-        library.put('B', 'b');
-        library.put('C', 'c');
+        library.put('A','a');library.put('B','b');library.put('C','c');
 
-        library.put('E', 'e
+        library.put('E','e
 
-        library.put('G', 'g'); 
-        library.put('H', 'h');
-        library.put('I', 'i');
-        library.put('J', 'j');
-        library.put(
-                put('L ',  'l');
-        library.put('M', 'm');
-        library.put('N', 'n');
-        library.put('O', 'o');
-        library.put('P', 'p');
- 
+        library.put('G','g');library.put('H','h');library.put('I','i');library.put('J','j');library.put(put('L ','l');library.put('M','m');library.put('N','n');library.put('O','o');library.put('P','p');
 
-        library.put('T', 't');
-// 
-// 
-        library.put('U', 'u');
-        library.put('V', 'v');
-        library.put('W', 'w');
-// 
-        library.put('X', 'x');
-// 
-        library.put('Y', 'y');
-// 
-        library.put('Z', 'z');
-// 
-        
-// 
-        String answer = "";
-// 
-// 
-            
-// 
-// 
-        for (int i = 0; i < str.length(); i++){
-// 
-        char current = str.charAt(i);
-// 
-        if (Character.isUpperCase(current)) {
-            answer += library.get(current);
+        library.put('T','t');
+        //
+        //
+        library.put('U','u');library.put('V','v');library.put('W','w');
+        //
+        library.put('X','x');
+        //
+        library.put('Y','y');
+        //
+        library.put('Z','z');
+        //
 
-                answer+=current;
-// 
-// 
-            }
-        }
-        return answer;
-    } 
-} 
+        //
+        String answer="";
+        //
+        //
 
+        //
+        //
+        for(int i=0;i<str.length();i++){
+        //
+        char current=str.charAt(i);
+        //
+        if(Character.isUpperCase(current)){answer+=library.get(current);
 
-// Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int. 
-// Write the following methods  tance methods):
+        answer+=current;
+        //
+        //
+        }}return answer;}}
 
-// *Method named getFirstName without any parameters, it needs to return the value of the firstName field.
-// *Method named getLastName without any parameters, it needs to return the value of the lastName field.
-// *Method named getAge without  parameters, it needs to return the value of the age field.
-// *Method named setFirstName with one parameter of type String, it needs to set the value of the firstName field.
-// *Method named setLastName with one parameter of type String, it needs to set the value of the lastName field.
-// *Method named setAge with one parameter of type int, it needs to set the value of the age field. If the parameter is less than 0 or greater than 100, it needs to set the age field value to 0.
-// *Method named isTeen without any parameters, it needs to return true if the value of the age field is greater than 12 and less than 20, otherwise, return false.
-// *Method named getFullName without any parameters, it needs to return the full name of the person.
-//     *In case both firstName and lastName fields are empty, Strings return an empty String.
-//     *In case lastName is an empty String, return firstName.
-//     *In case firstName is an empty String, return lastName.
-    
-// To check if s String is empty, use the method isEmpty from the String class. For example, firstName.isEmpty() returns true if the String is empty or in other words, when the String does not contain any characters.
+        // Write a class with the name Person. The class needs three fields (instance
+        // variables) with the names firstName, lastName of type String and age of type
+        // int.
+        // Write the following methods tance methods):
 
+        // *Method named getFirstName without any parameters, it needs to return the
+        // value of the firstName field.
+        // *Method named getLastName without any parameters, it needs to return the
+        // value of the lastName field.
+        // *Method named getAge without parameters, it needs to return the value of the
+        // age field.
+        // *Method named setFirstName with one parameter of type String, it needs to set
+        // the value of the firstName field.
+        // *Method named setLastName with one parameter of type String, it needs to set
+        // the value of the lastName field.
+        // *Method named setAge with one parameter of type int, it needs to set the
+        // value of the age field. If the parameter is less than 0 or greater than 100,
+        // it needs to set the age field value to 0.
+        // *Method named isTeen without any parameters, it needs to return true if the
+        // value of the age field is greater than 12 and less than 20, otherwise, return
+        // false.
+        // *Method named getFullName without any parameters, it needs to return the full
+        // name of the person.
+        // *In case both firstName and lastName fields are empty, Strings return an
+        // empty String.
+        // *In case lastName is an empty String, return firstName.
+        // *In case firstName is an empty String, return lastName.
 
-    e
+        // To check if s String is empty, use the method isEmpty from the String class.
+        // For example, firstName.isEmpty() returns true if the String is empty or in
+        // other words, when the String does not contain any characters.
 
-    y
+        e
 
-    n.setAge(18);
+        y
 
+        n.setAge(18);
 
-    y
+        y
 
-    n
+        n
 
-    
-
-    
-    e
-
-    
-
-    
-
-    
-    
-
-    
-
-    
+        e
 
         return this.lastNam e;
     }
-    
+
     public int getAge(){
      
 
@@ -198,208 +163,111 @@ class Solution {
 
      
 
-    ic void setLasN
+    ic
+
+    void setLasN
 
     me(String lastName){
-     
 
-    
-    public void setAge(int age){
-     
+    public void setAge(int age) {
 
-    
+        this.age=age;
 
-    
-        this.age = age;
-    
-    
-        
-    olean
-    i
-        
-    
+        olean i
 
-              
-        
-         
-
-    
-      
-          
-    
-    
-    
     }
-// 
+//
 
-     
+publi
 
-      
-    
+//
+public double getDivisionResult() {
+        //
 
-    
+        .second umber==0){
 
-    
+        //
 
-    
-    
-    publi 
-         
+        //
 
-    
-    
+        //
 
-    
+        //
 
-      
-    
+        //
 
-    
-    
+        // The method should not return anything (void) and it needs to keep readin
+        // numbers from the
+        //
+        // a message in the format "SUM = XX AVG = YY".
+        // ob is a wall painter and he needs your help. You have
+        // at helps Bob calculate how many buckets of paint he needs to buy before going
+        // to work. Bob might also have some extra buckets at home. He also knows the
+        // rea that he can cover with one b
+        // 1. Write a method named getBucketCount with 4 parameters. The first paramet
+        // r should be named width of type double. This parameter represe
+        // The second parameter should be named height of type double. This paramet
+        // r
 
-        
-    // 
-        public double getDivisionResult(){
-    // 
-       
-    .second
-    umber == 0) {
-    
-    
-    
- 
+        the area that can be covered with one bucket of paint.
 
-      
+        h parameter should be named extraBuckets.This parameter represents
+        // the bucket count that Bob has at home.
+        //
+        // The method needs to return a value of type int that represents the number
+        // of buckets that Bob needs to buy before going to work. To calculate the
+        // bucket count, refer to the notes below.
+        // If one of the parameters width, height or areaPerBucket is less or equal
+        // to 0 or if extraBuckets is less than 0, the method needs to return -1 to
+        // indicate an in
 
-      
+        rameters are valid,the method needs to calculate the number of buckets and return it.
 
-        
-    // 
-      
+        // Examples of input/output:
+        //
 
-      
+        tCount(-3.4,2.1,1.5,2);→should return-1 since the width parame
+        // er is invalid
+        // *getBucketCount(3.4, 2.1, 1.5, 2); → should return 3 since the wall area is
+        // 7.14, a single bucket can cover an area of 1.5 and Bob has 2 extra buckets
+        // home.
+        // *getBucketCount(2.75, 3.25, 2.5, 1); → should return 3 since the wall area is
+        // 8.9375, a single bucket can cover an area of 2.5 and Bob has 1 extra bucket
+        // at home.
 
-    //
+        // 2. Bob does not like to enter 0 for the extraBuckets parameter so he nee
+        // s another method.
+        //
+        // Write another overloaded method named getBucketCount with 3 parameters namel
+        // width, height, and areaPerBucket (all of type double).
+        // This method needs to return a value of type int that represents the number of
+        // buckets that Bob needs to buy before going to work. To calculate the bucket
+        // count, refer to the notes below.
+        // If one of the parameters width, height or areaPerBucket is less or equal to
+        // 0, the method needs to return -1 to indicate an invalid value.
+        // If all parameters are valid, the method needs to calculate the number of
+        // buckets and return it.
 
-    
+        etBucketCount(-3.4,2.1,1.5);→should return-1 since the width parameter is inv cketCount(e
 
-    
-        
-    
-        
-    // 
-    
-    // 
-    
-    
-    
-    
-    
+        In some cases,Bob does not know the w/
 
-    
-    
-    
-    
-    
-    
+        /If one of the parameters area or areaPerBucket is less or equal to 0,the method ne all parameters are valid,the method needs to calculat
 
-                    // 
-    
-    
-    
+        /*getBucketCount(3.4,1.5);→should return 3 since the area is 3.4 etBucketCount(6.26,2.2);→should retur n
 
-    
-    
-    
-    
+        //
 
-    
+        public class PaintJob{public static int getBucketCount(double width,double height,double areaPerBucket,int extraBuckets){
 
-    // The method should not return anything (void) and it needs to keep readin
-    // numbers from the 
-    //
-    // a message in the format "SUM = XX AVG = YY".
-    // ob is a wall painter and he needs your help. You have 
-    // at helps Bob calculate how many buckets of paint he needs to buy before going
-    // to work. Bob might also have some extra buckets at home. He also knows the 
-    // rea that he can cover with one b
-    // 1. Write a method named getBucketCount with 4 parameters. The first paramet
-    // r should be named width of type double. This parameter represe
-    // The second parameter should be named height of type double. This paramet
-    // r 
+        if((width<=0)||(height<=0)||(areaPerBucket<=0)||(extraBuckets<0)){
 
-     the area that can be covered with one bucket of paint.
+        }int bucketNeedForJob=(int)Math.ceil((width*height)/areaPerBucket);return bucketNeedForJob-extraBuckets;}
 
-    h parameter should be named extraBuckets. This parameter represents
-// the bucket count that Bob has at home.
-// 
-// The method needs to return a value of type int that represents the number
-// of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
-// If one of the parameters width, height or areaPerBucket is less or equal
-// to 0 or if extraBuckets is less than 0, the method needs to return -1 to indicate an in
+        public static int getBucketCount(double width,double height,double areaPerBucket){return getBucketCount(width,height,areaPerBucket,0);}
 
-    rameters are valid, the method needs to calculate the number of buckets and return it.
-
-// Examples of input/output:
-// 
-
-    tCount(-3.4, 2.1, 1.5, 2); → should return -1 since the width parame
-// er is invalid
-// *getBucketCount(3.4, 2.1, 1.5, 2); → should return 3 since the wall area is
-// 7.14, a single bucket can cover an area of 1.5 and Bob has 2 extra buckets home.
-// *getBucketCount(2.75, 3.25, 2.5, 1); → should return 3 since the wall area is 8.9375, a single bucket can cover an area of 2.5 and Bob has 1 extra bucket at home.
-
-// 2. Bob does not like to enter 0 for the extraBuckets parameter so he nee
-// s another method.
-// 
-// Write another overloaded method named getBucketCount with 3 parameters namel
-//  width, height, and areaPerBucket (all of type double).
-// This method needs to return a value of type int that represents the number of buckets that Bob needs to buy before going to work. To calculate the bucket count, refer to the notes below.
-// If one of the parameters width, height or areaPerBucket is less or equal to 0, the method needs to return -1 to indicate an invalid value.
-// If all parameters are valid, the method needs to calculate the number of buckets and return it.
-
-
-        etBucketCount(-3.4, 2.1, 1.5); → should return -1 since the width parameter is inv
-            cketCount(
-        e
-            
-         In some cases, Bob does not know the w
-    /
-
-    / If one of the parameters area or areaPerBucket is less or equal to 0, the method ne
-         all parameters are valid, the method needs to calculat
-    
-
-    / *getBucketCount(3.4, 1.5); → should return 3 since the area is 3.4 
-        etBucketCount(6.26, 2.2); → should retur n
-  
-
-          
-    /
-/ 
-
- 
-public class PaintJob {
-    public static int getBucketCount(double width, double height, double areaPerBucket, int extraBuckets) {
-  
-     if ((width <= 0) || (height <= 0) || (areaPerBucket <= 0) || (extraBuckets < 0)) {
-  
-    }
-     int bucketNeedForJob = (int) Math.ceil((width*height)/areaPerBucket);
-     return bucketNeedForJob - extraBuckets;
- }
-  
- public static int getBucketCount(double width, double height, double areaPerBucket) {
-     return getBucketCount(width, height, areaPerBucket, 0);
- }
-  
- public static int getBucketCount(double area, double areaPerBucket) {
-     if ((area <= 0) || (areaPerBucket <= 0)){
-         return -1;
-     }
-     return (int) Math.ceil(area/areaPerBucket);
- }
- }
+        public static int getBucketCount(double area,double areaPerBucket){if((area<=0)||(areaPerBucket<=0)){return-1;}return(int)Math.ceil(area/areaPerBucket);}
+}
 
 // Write a method called inputThenPrintSumAndAverage that does not have any
 // parameters.
@@ -1534,86 +1402,64 @@ public class PlayingCat {
                 ment or
                     
                     hod pr
-                 static
+
+        static
                     
                     not ad
 
-        
-
-        tatic 
+        tatic
 
         0:
-        
-                    System
-                    bre
-                     1:
-                    System
-                    bre
-                     2:
-                    System
-                    brea
-                     3:
-                 
-             
-         
 
-                    break;
+        System bre 1:
+        System bre 2:
+        System brea 3:
 
-                    System.out.println("FIVE");
-                   
+        break;
 
-                    System.out.println("SIX");
+        System.out.println("FIVE");
 
-                case 7:
-                    System.out.println("SEVEN");
+        System.out.println("SIX");
 
-                case 8:
-                    System.o
+        case 7:System.out.println("SEVEN");
 
-                case 9:
+        case 8:System.o
 
-                    break;
-                default:
+        case 9:
 
-                }
+        break;default:
 
-        }
+    }
 
-
-    
+    }
 
     // to 9999.
 
     // If the parameter is not in that range return false.
-    
 
     // and return true if it is, otherwise return fal
 
     // divisible by 400.
 
-    
-
-    
-
     // created the isLeapYear method. You
 
     // Write another method getDaysInMonth with two parameters month and year. ​B
-    // of type 
+    // of type
 
     // If parameter month is < 1 or > 12 return -1. ​
     // If para
 
     // This method needs to return the
-    
 
     // You should check if the year is
 
-    
+    y
 
-       y
+    DaysInMonth(2,2018);→should return 2
 
-                DaysInMonth(2, 2018); → should return 2
-                    a leap year 
+    a leap
+
+    year 
                 
                     InMonth(-1, 
                 id.
@@ -1708,112 +1554,59 @@ public class PlayingCat {
 
             }
 
-            public static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
 
 
         }
 
-                for (int i = 2; i <= n / 2; i
+    for(
 
-
-    
-    
-                }
-
-
-    
-
-    
-
-    
-
-    
-    
-    
-    
-    
-                        the lo
-                    
-                 
-
-
-    
-
-       Sse.otprnl( +
-    
-
-        
-                    if (numbersFound == 5) {
-
-                    }
-
-        
-                System.out.println("The sum of the numbe
-
-            }
-        
-
-        
-
-    
-
-    
-
-    // which repr
-
-    // The method should use a for loop to sum
-    
-
-    
-
-    nvalid input.
-
-    xample input/output:
-
-    // * sumOdd(1, 100); → should return 2500
-
-    // * sumOdd(-1, 100); → should return -1
-
-    /
-
-    /
-
-    pu
-
-    }
-    
+    int i = 2;i<=n/2;i
 
     }
 
- 
+    the lo
 
+    Sse.otprnl(+
 
+    if(numbersFound==5){
 
-
-    
-
-
-
-
- 
-
-
-
-    em.o
-t
-
-     tatic int 
-
-    while (number > 0) {
-            sum += number % 10;
-            number = number / 10;
-        }
-
-
-        i
-
-            eturn -1 
-        }
-
-    }
 }
+
+System.out.println("The sum of the numbe
+
+}
+
+// which repr
+
+// The method should use a for loop to sum
+
+nvalid input.
+
+xample input/output:
+
+// * sumOdd(1, 100); → should return 2500
+
+// * sumOdd(-1, 100); → should return -1
+
+/
+
+/
+
+pu
+
+}
+
+}
+
+em.o t
+
+tatic int
+
+while(number>0){sum+=number%10;number=number/10;}
+
+i
+
+eturn-1}
+
+}}
