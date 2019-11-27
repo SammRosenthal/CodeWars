@@ -1,3 +1,44 @@
+class Solution {
+
+    public static void main(String[] argh) {
+        Scanner sc = new Scanner(System.in);
+
+        while (sc.hasNext()) {
+            String input = sc.next();
+            Stack<Character> stack = new Stack<>();
+            Map<Character, Character> map = new HashMap<Character, Character>() {
+                {
+                    put(']', '[');
+                    put('}', '{');
+                    put(')', '(');
+                }
+            };
+
+            for (int i = 0; i < input.length(); i++) {
+                if (map.containsValue(input.charAt(i))) {
+                    stack.push(input.charAt(i));
+                }
+
+                if (stack.size() > 0) {
+                    if (map.get(input.charAt(i)) == stack.lastElement()) {
+                        stack.pop();
+                    }
+                } else {
+                    stack.push('x');
+                    break;
+                }
+            }
+
+            if (stack.size() > 0) {
+                System.out.println("false");
+            } else {
+                System.out.println("true");
+            }
+        }
+    }
+
+}
+
 public static String getSmallestAndLargest(String s,int k){String smallest=s.substring(0,k);String largest=s.substring(0,k);
 
 for(int i=0;i<s.length()-(k-1);i++){if(s.substring(i,k+i).compareTo(largest)>0){largest=s.substring(i,k+i);}if(s.substring(i,k+i).compareTo(smallest)<0){smallest=s.substring(i,k+i);}}`
@@ -7,7 +48,9 @@ for(int i=0;i<s.length()-(k-1);i++){if(s.substring(i,k+i).compareTo(largest)>0){
 
 return smallest+"\n"+largest;}
 
-static nt m int answer;for(int=nt low int index=ar.chant // John works at a clothing store. He has a large pile of socks that he must pair them by color for sale.
+static nt m
+    int answer;for(int=nt low
+    int index=ar.chant // John works at a clothing store. He has a large pile of socks that he must pair them by color for sale.
 // You will be given an array of integers representing the color of each sock. Determine how many pairs of
 // socks with matching colors there are.
 // John works at a clothing store and he's going through a pile of socks to find the number of matching pairs.
@@ -19,9 +62,10 @@ static nt m int answer;for(int=nt low int index=ar.chant // John works at a clot
 // The first line contains an integer , the number of socks.
 // The second line contains space-separated integers describing the colors of the socks in the pile.
 
-Integer pairs=0;for(int i:ar){if(sockDaer sokrawr}lse{sockDrawer.put(i,1);}f
+Integer pairs=0;for(
+    int i:ar){if(sockDaer sokrawr}lse{sockDrawer.put(i,1);}f
 
-if(sockDrawrget(entry.getKey())>)sockr pairs+=1;se{break}r
+    if(sockDrawrget(entry.getKey())>)sockr pairs+=1;se{break}r
 
 i lowest=arr[j];
 
@@ -29,25 +73,29 @@ answer+;
 
 e}e
 
-hvbchar[]steps=s.toCh for(int i=0;i<n;i++){if(s nVle=fals;
+hvbchar[]steps=s.toCh for(
+    int i = 0;i<n;i++){if(s nVle=fals;
 
 }
 
-ou're given strings J
-// The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+    ou're given
+    strings J
+    // The letters in J are guaranteed distinct, and all characters in J and S are
+    // letters. Letters are case sensitive, so "a" is considered a different type of
+    // stone from "A".
 
-// Example 1:
+    // Example 1:
 
-// Input: J = "aA", S = "aAAbbbb"
-// Output: 3
-// Example 2:
+    // Input: J = "aA", S = "aAAbbbb"
+    // Output: 3
+    // Example 2:
 
-// Note:
+    // Note:
 
-// S and J will consist of letters and have length at most 50.
-// The characters in J are distinct.
+    // S and J will consist of letters and have length at most 50.
+    // The characters in J are distinct.
 
-class Solution {
+    class Solution {
     public int numJewelsInStones(String J, String S) {
         String[]array2=S.split("");int count=0;
 
