@@ -1,3 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int arrayLength = scan.nextInt();
+        scan.nextLine();
+        String[] temp = scan.nextLine().split(" ");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int answer = 0;
+
+        for (String s : temp) {
+            list.add(Integer.parseInt(s));
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i; j < list.size(); j++) {
+                List<Integer> tempList = list.subList(i, j + 1);
+                int sum = tempList.stream().reduce(0, (a, b) -> a + b);
+
+                if (sum < 0) {
+                    answer += 1;
+                }
+            }
+        }
+        System.out.println(answer);
+    }
+}
+
 class Solution {
 
     public static void main(String[] argh) {
