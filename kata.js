@@ -1,3 +1,14 @@
+// throw custom errors in if statements
+
+function isPositive(a) {
+   if (a > 0) {
+       return "YES";
+   } else if (a == 0) {
+       throw new Error("Zero Error");
+   } else if (a < 0) {
+       throw new Error("Negative Error");
+   }
+}
 
 // Write a function called repeatStr which repeats the given string string exactly n times.
 
