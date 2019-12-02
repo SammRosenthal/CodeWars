@@ -52,7 +52,7 @@ static int sockMerchant(int n, int[] ar) {
             }
        } 
 
- // omplet herpatdStrniclong repeteStrigchrInStri    interChr  (nt)  log ut iker. a sequence o cnsi ary' l
+ omplet herpatdStrniclong repeteStrigchrInStri    interChr  (nt)  log ut iker. a sequence o cnsi ary' l
 
 implete the countinVll
 
